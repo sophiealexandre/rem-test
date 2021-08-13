@@ -1,3 +1,3445 @@
+<!-- For test only -->
+
+<style>
+  @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&display=swap");
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: 700; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: \201c \201d \2018 \2019; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button,
+input {
+  line-height: normal; }
+
+button, html input[type=button],
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body,
+figure {
+  margin: 0; }
+
+legend,
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+
+.heading-1 {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 56px;
+  line-height: 60px;
+  margin-bottom: 24px; }
+  @media screen and (max-width: 768px) {
+    .heading-1 {
+      font-size: 40px;
+      line-height: 44px; } }
+
+.heading-2 {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 40px; }
+  @media screen and (max-width: 374px) {
+    .heading-2 {
+      font-size: 32px; } }
+
+.heading-3 {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  color: #000000;
+  margin: 0; }
+
+.heading-4 {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #000000;
+  margin: 0; }
+
+.heading-5 {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #4c4c4c; }
+
+.sub-heading {
+  margin-bottom: 0.67em;
+  margin-top: 0;
+  color: #034638;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700; }
+  .sub-heading:before {
+    margin-right: 8px;
+    vertical-align: top;
+    height: 24px;
+    width: 24px;
+    background-position: center center;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat; }
+  .sub-heading--clock:before {
+    content: " ";
+    background-image: url(../img/icon-clock.png); }
+  .sub-heading--clock-white:before {
+    content: " ";
+    background-image: url(../img/icon-clock-white.png); }
+  .sub-heading--money:before {
+    content: " ";
+    background-image: url(../img/icon-money.png); }
+  .sub-heading--question:before {
+    content: " ";
+    background-image: url(../img/icon-question.png); }
+  .sub-heading--chat:before {
+    content: " ";
+    background-image: url(../img/icon-chat.png); }
+  .sub-heading--bell:before {
+    content: " ";
+    background-image: url(../img/icon-bell.png); }
+  .sub-heading--person:before {
+    content: " ";
+    background-image: url(../img/icon-person.png); }
+
+.copy-1 {
+  margin-bottom: 2.2em;
+  margin-top: 0;
+  color: #5c5c5c;
+  font-size: 24px;
+  line-height: 32px;
+  margin-bottom: 0; }
+  @media screen and (max-width: 768px) {
+    .copy-1 {
+      font-size: 22px; } }
+
+.copy-2 {
+  margin-bottom: 2.2em;
+  margin-top: 0;
+  color: #5c5c5c;
+  font-size: 18px;
+  line-height: 24px; }
+
+.copy-3 {
+  margin-bottom: 2.2em;
+  margin-top: 0;
+  color: #5c5c5c;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0; }
+
+.copy-4 {
+  margin-bottom: 2.2em;
+  margin-top: 0;
+  color: #5c5c5c;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0; }
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  display: inline-block; }
+  .btn--line {
+    color: #000000; }
+    .btn--line:hover {
+      color: #ffffff; }
+  .btn--green {
+    background-color: #034638;
+    color: #ffffff; }
+    .btn--green:hover {
+      color: #d5e739; }
+  .btn--yellow {
+    background-color: #d5e739;
+    color: #034638; }
+    .btn--yellow:hover {
+      color: #000000; }
+  .btn--yellow-arrow {
+    background-color: #d5e739;
+    color: #034638;
+    position: relative; }
+    .btn--yellow-arrow:hover {
+      color: #000000; }
+    .btn--yellow-arrow::after {
+      content: ' ';
+      background: url(../img/arrow-btn.png);
+      vertical-align: middle;
+      margin-left: 8px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 14px;
+      width: 12px;
+      margin-bottom: 2px;
+      display: inline-block; }
+  .btn__action {
+    text-decoration: none;
+    margin: 0; }
+    .btn__action:before {
+      margin-right: 8px;
+      margin-top: 4px;
+      height: 15px;
+      width: 15px;
+      background-position: center center;
+      display: inline-block;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .btn__action--download:before {
+      content: ' ';
+      height: 20px;
+      width: 20px;
+      background-image: url(../img/arrow-down-circle.png); }
+    .btn__action--back:before {
+      content: ' ';
+      background-image: url(../img/arrow-back.png); }
+    .btn__action--external {
+      font-size: 12px;
+      grid-column: 2 / -1;
+      display: none; }
+      .btn__action--external::after {
+        content: ' ';
+        background: url(../img/arrow-btn.png);
+        vertical-align: middle;
+        margin-left: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 10px;
+        width: 10px;
+        margin-bottom: 2px;
+        display: inline-block; }
+    .btn__action--text {
+      font-size: 14px; }
+
+.card--grey-4 {
+  background-color: #f1f4f5; }
+
+.card--green-teal {
+  background-color: #97dbc0; }
+
+.card--green-pale {
+  background-color: #dbe9cf; }
+  .card--green-pale--cl {
+    background-color: #dbe9cf;
+    display: grid; }
+    .card--green-pale--cl .card--body {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      align-items: center; }
+      @media screen and (max-width: 768px) {
+        .card--green-pale--cl .card--body {
+          grid-template-columns: 1fr; } }
+      .card--green-pale--cl .card--body p {
+        margin-bottom: 0; }
+      .card--green-pale--cl .card--body div a {
+        width: 100%; }
+
+.card--blue-light {
+  background-color: #e5f4ff; }
+
+.card--red-light {
+  background-color: #fbe8e8;
+  border: 1px solid #e02020; }
+
+.card--green-forest {
+  background-color: #034638; }
+  .card--green-forest .heading-2,
+  .card--green-forest .sub-heading {
+    color: #dbe9cf; }
+
+.card--black {
+  background-color: #000000; }
+  .card--black .heading-2,
+  .card--black .sub-heading {
+    color: #dbe9cf; }
+
+.card--bg-img {
+  background-image: url(../img/bg_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%; }
+  .card--bg-img .heading-2 {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+  .card--bg-img .sub-heading {
+    color: #034638; }
+
+.card--bg-img-large {
+  background-image: url(../img/bg-img-large.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .card--bg-img-large .heading-2,
+  .card--bg-img-large .copy-2,
+  .card--bg-img-large .sub-heading {
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+
+body {
+  background-color: #ffffff; }
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 40px;
+  max-width: 1024px;
+  padding: 40px;
+  background-color: #ffffff;
+  margin: auto; }
+  @media screen and (max-width: 768px) {
+    .content {
+      padding: 16px;
+      grid-gap: 16px; } }
+  .content__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 40px; }
+    @media screen and (max-width: 768px) {
+      .content__cards {
+        grid-gap: 16px; } }
+  .content__map * {
+    width: 100%;
+    border: 1px solid #d9d9d9; }
+  .content__ann {
+    background-color: #034638; }
+    .content__ann--highlight {
+      font-weight: 700; }
+    .content__ann--icon {
+      height: 24px;
+      width: 24px;
+      background-image: url(../img/icon-ann.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; }
+    .content__ann p {
+      margin: 0; }
+    .content__ann a {
+      color: #ffffff; }
+  .content__ann-wrapper {
+    color: #ffffff;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    display: grid;
+    justify-content: center;
+    grid-gap: 15px;
+    max-width: 1024px;
+    margin: 0 auto; }
+    @media screen and (max-width: 768px) {
+      .content__ann-wrapper {
+        padding: 16px; } }
+    @media (max-width: 480px) {
+      .content__ann-wrapper {
+        font-size: 12px; } }
+  .content__nav {
+    display: grid;
+    grid-gap: 24px; }
+    .content__nav--name .heading-4 {
+      font-weight: normal; }
+    .content__nav--line {
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 32px;
+      margin-right: 10px;
+      letter-spacing: -2px; }
+      .content__nav--line.content__nave--line-exo5 {
+        color: #cb5898; }
+      .content__nav--line.content__nave--line-exo6 {
+        color: #efa495; }
+
+.card {
+  padding: 40px;
+  border-radius: 8px;
+  text-decoration: none; }
+  @media screen and (max-width: 768px) {
+    .card {
+      padding: 32px 24px; } }
+  @media screen and (max-width: 768px) {
+    .card__copy {
+      display: none; } }
+  .card__header {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between; }
+    @media screen and (max-width: 768px) {
+      .card__header {
+        margin: 8px 0; } }
+  .card__header--title {
+    margin: 0;
+    color: #000000;
+    font-weight: 700; }
+    @media screen and (max-width: 768px) {
+      .card__header--title {
+        font-size: 16px; } }
+  @media screen and (max-width: 768px) {
+    .card__header--link {
+      font-size: 12px; } }
+  .card__steps {
+    list-style: none;
+    margin: 0;
+    padding-left: 63px;
+    counter-reset: custom-counter; }
+    .card__steps-item {
+      counter-increment: custom-counter;
+      position: relative;
+      padding-left: 8px; }
+      .card__steps-item:last-of-type p {
+        margin-bottom: 0; }
+        @media screen and (max-width: 768px) {
+          .card__steps-item:last-of-type p {
+            margin-bottom: 1em; } }
+      .card__steps-item::before {
+        content: counter(custom-counter);
+        position: absolute;
+        font-size: 24px;
+        --size: 40px;
+        left: calc(-1 * var(--size) - 20px);
+        line-height: var(--size);
+        width: var(--size);
+        height: var(--size);
+        top: calc(-1 * (calc(var(--size) / 2.5)));
+        border-radius: 50%;
+        text-align: center;
+        background-color: #97dbc0;
+        color: #034638;
+        font-weight: 700;
+        padding: 5px; }
+  .card__info {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 16px;
+    padding: 24px; }
+    @media screen and (max-width: 768px) {
+      .card__info {
+        padding: 24px 16px; } }
+    .card__info p {
+      margin-bottom: 16px; }
+      .card__info p:last-of-type {
+        margin-bottom: 0; }
+    .card__info .info__icon {
+      height: 24px;
+      width: 24px;
+      background-image: url(../img/info-1.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain; }
+      .card__info .info__icon--2 {
+        background-image: url(../img/info-2.png); }
+      .card__info .info__icon--3 {
+        background-image: url(../img/info-3.png); }
+    .card__info .info__copy--highlight, .card__info .info__copy--link {
+      color: #e02020;
+      font-weight: 700;
+      text-decoration: none; }
+    .card__info .info__copy--link {
+      text-decoration: underline; }
+      .card__info .info__copy--link-arrow {
+        text-decoration: none; }
+        .card__info .info__copy--link-arrow::after {
+          content: ' ';
+          background: url(../img/arrow-red.png);
+          vertical-align: middle;
+          margin-left: 3px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          height: 12px;
+          width: 12px;
+          margin-bottom: 2px;
+          display: inline-block; }
+    .card__info .info__heading {
+      margin-bottom: 16px; }
+      .card__info .info__heading--sm {
+        margin-bottom: 8px;
+        margin-top: 16px; }
+    .card__info .info__list {
+      margin: 0;
+      margin-bottom: 16px;
+      padding-left: 15px; }
+      .card__info .info__list li {
+        list-style-type: none;
+        margin-bottom: 5px;
+        position: relative;
+        padding-left: 15px; }
+        .card__info .info__list li:before {
+          content: '·';
+          font-size: 25px;
+          vertical-align: middle;
+          line-height: 20px;
+          margin-right: 10px;
+          position: absolute;
+          left: 0px; }
+  .card--2cl, .card--3cl, .card--6cl {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-gap: 80px; }
+    @media screen and (max-width: 768px) {
+      .card--2cl, .card--3cl, .card--6cl {
+        grid-template-columns: 1fr;
+        grid-gap: 40px; } }
+  .card--3cl.card--bg-img-large {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-gap: 0; }
+  .card--no-padding {
+    padding: 0;
+    grid-gap: 40px; }
+    .card--no-padding-margin {
+      margin-top: 20px; }
+      .card--no-padding-margin .card__cl--2 {
+        margin-top: -15px; }
+        @media screen and (max-width: 768px) {
+          .card--no-padding-margin .card__cl--2 {
+            margin-top: unset; } }
+  .card--text {
+    border: 1px solid #d9d9d9; }
+  .card--6cl {
+    grid-template-columns: 1fr 1.5fr; }
+    @media screen and (max-width: 768px) {
+      .card--6cl {
+        grid-template-columns: 1fr; } }
+  .card--2cl {
+    grid-template-columns: 1fr 1fr; }
+    @media screen and (max-width: 768px) {
+      .card--2cl {
+        grid-template-columns: 1fr;
+        grid-gap: 16px; } }
+  .card__cl {
+    text-decoration: none; }
+    .card__cl--padding {
+      padding: 40px;
+      border-radius: 8px;
+      display: grid;
+      grid-gap: 40px; }
+      .card__cl--padding .heading-2 {
+        align-self: flex-end;
+        margin: 0; }
+        @media screen and (max-width: 768px) {
+          .card__cl--padding .heading-2 {
+            margin-bottom: 0.67em; } }
+      .card__cl--padding .btn {
+        justify-self: flex-start;
+        align-self: flex-end; }
+        .card__cl--padding .btn.neg-margin {
+          margin-top: -2em; }
+          @media screen and (max-width: 768px) {
+            .card__cl--padding .btn.neg-margin {
+              margin-top: initial; } }
+      @media screen and (max-width: 768px) {
+        .card__cl--padding {
+          padding: 32px 24px;
+          grid-gap: 5px; } }
+    .card__cl--reverse {
+      display: none !important; }
+      @media screen and (max-width: 768px) {
+        .card__cl--reverse {
+          grid-row: 1; } }
+      .card__cl--reverse.card__cl--2 {
+        margin-top: unset; }
+    .card__cl--2 {
+      display: grid;
+      grid-gap: 16px;
+      align-content: start; }
+    .card__cl--itinerary {
+      grid-gap: 24px; }
+
+.line {
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+  align-self: center;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none; }
+  .line--1 {
+    background-color: #cb5898; }
+  .line--2 {
+    background-color: #efa495; }
+  .line__heading {
+    margin-left: 6px; }
+    .line__heading--options {
+      background-image: url(../img/arrow-down.png);
+      background-repeat: no-repeat;
+      background-position: calc(100% - 12px) 12px;
+      transition: all 0.1s ease;
+      background-size: 27px; }
+  .line__name {
+    margin: 0;
+    margin-left: 6px;
+    color: #000000; }
+    @media screen and (max-width: 768px) {
+      .line__name {
+        display: block; } }
+  .line__list {
+    list-style: none;
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    transition: max-height 0.4s ease-in-out, margin-top 0.5s ease-out;
+    height: auto;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden; }
+  .line__item {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9; }
+    .line__item:last-child {
+      border-bottom: none; }
+  .line__link {
+    text-decoration: none;
+    color: #4c4c4c;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-gap: 8px; }
+    .line__link-arrow {
+      height: 25px;
+      width: 25px;
+      background-image: url(../img/arrow-link.png);
+      background-repeat: no-repeat;
+      background-position: center right;
+      background-size: contain; }
+  .line__sector {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+    margin: 0; }
+  .line__copy {
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0; }
+  .line__header.active .line__heading--options {
+    background-image: url(../img/arrow-up.png); }
+  .line__header.active + .line__list {
+    max-height: 1000px;
+    margin-top: 16px; }
+    .line__header.active + .line__list li {
+      display: block; }
+
+.clone-elements,
+.route-card-clone,
+.route-tag-clone,
+.route-step-clone,
+.route-status,
+.route-step-summary-clone,
+.route-none-clone {
+  display: none !important; }
+
+.sector-canora_mont_royal .itinerary__content--filters,
+.sector-mascouche_terrebonne .itinerary__content--filters,
+.sector-repentigny_assomption .itinerary__content--filters,
+.sector-roxboro_pierrefonds_sunnybrooke .itinerary__content--filters {
+  grid-gap: 20px;
+  grid-template-columns: 1fr;
+  grid-gap: 15px; }
+
+.sector-canora_mont_royal .itinerary__filter-line,
+.sector-mascouche_terrebonne .itinerary__filter-line,
+.sector-repentigny_assomption .itinerary__filter-line,
+.sector-roxboro_pierrefonds_sunnybrooke .itinerary__filter-line {
+  grid-row: 3; }
+
+.sector-deux_montagnes .itinerary .filter {
+  grid-template-columns: 1fr 1fr; }
+
+.itinerary {
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+  align-self: flex-start;
+  overflow: hidden; }
+  .itinerary__full {
+    border: 1px solid #d9d9d9;
+    padding: 16px 24px;
+    border-radius: 8px;
+    display: none; }
+    @media screen and (max-width: 768px) {
+      .itinerary__full {
+        padding: 16px; } }
+  .itinerary--sticky {
+    position: sticky;
+    top: 5px; }
+    @media screen and (max-width: 768px) {
+      .itinerary--sticky {
+        position: unset; } }
+  .itinerary__header {
+    padding: 8px 24px;
+    margin: 0; }
+    .itinerary__header--filters {
+      background-color: #262626;
+      color: #ffffff; }
+    .itinerary__header--reco {
+      background-color: #034638;
+      color: #d5e739; }
+    .itinerary__header--alt {
+      background-color: #d9d9d9;
+      color: #5c5c5c; }
+  .itinerary__filter-line {
+    border-bottom: 1px solid #d9d9d9;
+    grid-row: 2;
+    grid-column: 1 / -1;
+    align-self: center; }
+    @media (max-width: 825px) and (min-width: 769px) {
+      .itinerary__filter-line {
+        grid-row: 3; } }
+    @media screen and (max-width: 365px) {
+      .itinerary__filter-line {
+        grid-row: 3; } }
+  .itinerary__content {
+    padding: 16px 24px;
+    display: grid; }
+    @media screen and (max-width: 768px) {
+      .itinerary__content {
+        padding: 16px; } }
+    .itinerary__content--route {
+      grid-gap: 16px; }
+    .itinerary__content--filters {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-gap: 10px; }
+      @media (max-width: 825px) and (min-width: 769px) {
+        .itinerary__content--filters {
+          grid-gap: 20px;
+          grid-template-columns: 1fr;
+          grid-gap: 15px; } }
+      @media screen and (max-width: 365px) {
+        .itinerary__content--filters {
+          grid-gap: 20px;
+          grid-template-columns: 1fr;
+          grid-gap: 15px; } }
+    .itinerary__content--no-success {
+      justify-content: center;
+      align-content: center;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px; }
+      .itinerary__content--no-success > * {
+        align-self: center;
+        margin: 0;
+        grid-gap: 8px; }
+      .itinerary__content--no-success p {
+        color: #5c5c5c; }
+        .itinerary__content--no-success p:nth-of-type(1) {
+          font-weight: 700;
+          color: #000000; }
+  .itinerary__tag {
+    display: inline-block;
+    border-radius: 13px;
+    border: 1px solid #d9d9d9;
+    color: #5c5c5c;
+    padding: 2px 8px 2px 8px;
+    margin: 0 8px 4px 0;
+    font-size: 12px;
+    line-height: 19px;
+    position: relative;
+    padding-left: 30px; }
+    .itinerary__tag::before {
+      content: " ";
+      background-image: url(../img/icon-cal-grey.png);
+      height: 15px;
+      width: 15px;
+      display: inline-block;
+      margin-right: 5px;
+      position: absolute;
+      top: 48%;
+      transform: translateY(-50%);
+      margin-left: -20px;
+      background-position: center center;
+      vertical-align: middle;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .itinerary__tag--card::before {
+      content: " ";
+      background-image: url(../img/icon-card.png); }
+    .itinerary__tag--info {
+      background-color: #ffdf79;
+      color: #000000;
+      border: 1px solid #ffdf79;
+      padding-left: 30px;
+      padding-right: 10px; }
+      .itinerary__tag--info::before {
+        content: " ";
+        background-image: url(../img/icon-info.svg);
+        height: 20px;
+        width: 20px;
+        margin-left: -22px;
+        padding-bottom: 3px; }
+  .itinerary__route {
+    font-size: 14px;
+    line-height: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 16px; }
+    .itinerary__route--icons {
+      display: grid;
+      grid-template-rows: auto 0.8fr auto; }
+    .itinerary__route--icon {
+      display: block; }
+      .itinerary__route--icon:first-child {
+        align-self: end; }
+      .itinerary__route--icon:last-child {
+        align-self: start; }
+      .itinerary__route--icon g,
+      .itinerary__route--icon rect,
+      .itinerary__route--icon path,
+      .itinerary__route--icon circle {
+        fill: #034638; }
+      .itinerary__route--icon--line {
+        background-color: #034638;
+        width: 4px;
+        justify-self: center;
+        margin-top: -2px;
+        margin-bottom: -2px; }
+    .itinerary__route--stops {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-rows: auto 1fr auto; }
+    .itinerary__route--start, .itinerary__route--end {
+      display: block; }
+    .itinerary__route--end {
+      align-self: end; }
+  .itinerary__map {
+    display: flex;
+    place-items: center center; }
+    .itinerary__map > :first-child {
+      display: flex;
+      place-items: center center; }
+    .itinerary__map--icon {
+      display: flex;
+      align-items: center; }
+      .itinerary__map--icon::after {
+        content: "+";
+        display: inline-block;
+        margin: 0 4px; }
+      .itinerary__map--icon:last-of-type::after {
+        display: none; }
+      .itinerary__map--icon svg {
+        width: 100%;
+        height: 100%;
+        width: 18px;
+        height: 18px; }
+      .itinerary__map--icon-nested {
+        padding: 4px 6px;
+        border-radius: 4px;
+        line-height: 0;
+        display: flex;
+        align-items: center;
+        font-weight: 700; }
+        .itinerary__map--icon-nested .icon-nested {
+          display: flex;
+          margin-right: 4px; }
+          .itinerary__map--icon-nested .icon-nested:only-child {
+            margin-right: 0; }
+        .itinerary__map--icon-nested .nested-icon::only-child {
+          margin: 0; }
+      .itinerary__map--icon-status {
+        color: #034638;
+        background-color: #d5e739;
+        border-radius: 13px;
+        padding: 5px 15px 5px 15px;
+        font-size: 12px;
+        line-height: 16px;
+        margin-left: 8px; }
+      .itinerary__map--icon.mode-metro g,
+      .itinerary__map--icon.mode-metro rect,
+      .itinerary__map--icon.mode-metro path,
+      .itinerary__map--icon.mode-metro circle {
+        fill: #ffffff !important; }
+      .itinerary__map--icon.mode-metro span {
+        color: #ffffff !important; }
+
+.filter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  align-items: center;
+  grid-gap: 40px;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 12px 0; }
+  .filter:first-of-type {
+    padding-top: 0; }
+  .filter:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0; }
+  .filter__name {
+    margin: 0;
+    color: #000000; }
+    .filter__name:before {
+      content: " ";
+      border-radius: 3px;
+      background-image: url(../img/icon-direction.png);
+      background-color: #034638;
+      margin-right: 8px;
+      height: 24px;
+      width: 24px;
+      background-position: center center;
+      display: inline-block;
+      background-size: 12px;
+      background-repeat: no-repeat; }
+    .filter__name--time:before {
+      background-image: url(../img/icon-cal-white.png);
+      background-color: #5c5c5c; }
+  .filter__select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url(../img/arrow-down.png);
+    background-repeat: no-repeat, repeat;
+    background-position: 99% 50%;
+    background-size: 20px auto, 100%;
+    padding-right: 30px; }
+    .filter__select::-ms-expand {
+      display: none; }
+    .filter__select:focus {
+      border-color: #d9d9d9;
+      box-shadow: 0 0 1px 3px #d9d9d9;
+      box-shadow: 0 0 0 3px -moz-mac-focusring;
+      outline: none; }
+    .filter__select option {
+      text-align: right; }
+
+.breadcrumbs {
+  display: flex; }
+  @media screen and (max-width: 768px) {
+    .breadcrumbs {
+      display: none; } }
+  .breadcrumbs__item {
+    position: relative;
+    margin-left: 18px; }
+    .breadcrumbs__item::after {
+      content: " ";
+      background-image: url(../img/arrow-bread.png);
+      height: 12px;
+      width: 7px;
+      display: inline-block;
+      margin-left: 5px;
+      position: absolute;
+      top: 52%;
+      transform: translateY(-50%);
+      background-position: center center;
+      vertical-align: middle;
+      background-size: contain;
+      background-repeat: no-repeat; }
+    .breadcrumbs__item:last-of-type {
+      font-weight: 700; }
+      .breadcrumbs__item:last-of-type::after {
+        display: none; }
+    .breadcrumbs__item:first-of-type {
+      margin-left: 0px; }
+
+.nav__header {
+  background-color: #d5e739; }
+
+.nav__wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 24px 40px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px; }
+  @media screen and (max-width: 768px) {
+    .nav__wrapper {
+      grid-template-columns: 1fr;
+      padding: 24px 16px;
+      position: relative; } }
+
+.nav__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0.2em 0 0 0;
+  color: #034638;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 60px;
+  align-items: center;
+  justify-self: end;
+  justify-content: end; }
+
+.nav__item--dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 0 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: -8px;
+  margin-top: -8px;
+  border-radius: 8px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px; }
+  .nav__item--dropdown:hover {
+    background-color: #ffffff;
+    cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      .nav__item--dropdown:hover {
+        background-color: unset; } }
+    .nav__item--dropdown:hover .nav__dropdown {
+      display: grid; }
+  .nav__item--dropdown .nav__link {
+    background-color: transparent;
+    border: none; }
+    .nav__item--dropdown .nav__link:focus, .nav__item--dropdown .nav__link:active {
+      outline-color: #034638;
+      outline-style: dotted; }
+      .nav__item--dropdown .nav__link:focus + .nav__dropdown, .nav__item--dropdown .nav__link:active + .nav__dropdown {
+        display: grid; }
+  .nav__item--dropdown .nav__link p:focus {
+    color: purple; }
+    .nav__item--dropdown .nav__link p:focus .nav__dropdown {
+      display: grid; }
+  @media screen and (max-width: 768px) {
+    .nav__item--dropdown {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      margin-bottom: 0;
+      margin-top: 0; } }
+
+.nav__dropdown {
+  position: absolute;
+  min-width: 230px;
+  box-shadow: 0px 4px 8px -2px rgba(0, 0, 0, 0.16);
+  padding: 0px;
+  list-style: none;
+  border-radius: 8px;
+  border-top-left-radius: 0px;
+  z-index: 1;
+  grid-template-columns: 1fr;
+  background-color: #ffffff;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding-left: 0px;
+  left: 0;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .nav__dropdown {
+      box-shadow: none; } }
+  .nav__dropdown-item {
+    border-bottom: 1px solid #d9d9d9;
+    display: grid;
+    padding: 10px;
+    transition: all ease 0.2s; }
+    .nav__dropdown-item:hover {
+      background-color: #f1f4f5; }
+    .nav__dropdown-item:focus .nav__dropdown, .nav__dropdown-item:active .nav__dropdown {
+      display: grid; }
+    .nav__dropdown-item:last-of-type {
+      border-bottom: none; }
+      .nav__dropdown-item:last-of-type .nav__dropdown-link::before {
+        content: '6';
+        background-color: #efa495; }
+  .nav__dropdown-link {
+    font-weight: 700;
+    text-decoration: none;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    grid-gap: 10px; }
+    .nav__dropdown-link::before {
+      content: '5';
+      font-size: 20px;
+      --size: 15px;
+      left: calc(-1 * var(--size) - 20px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: calc(-1 * (calc(var(--size) / 2.5)));
+      border-radius: 50%;
+      text-align: center;
+      background-color: #cb5898;
+      color: #000000;
+      font-weight: 700;
+      padding: 10px; }
+    @media screen and (max-width: 768px) {
+      .nav__dropdown-link {
+        font-size: 18px;
+        padding: 10px 16px; } }
+
+.nav__link {
+  color: #034638;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px; }
+  .nav__link.active {
+    position: relative; }
+    .nav__link.active:after {
+      position: absolute;
+      content: '';
+      height: 2px;
+      display: inline-block;
+      width: 100%;
+      background-color: #034638;
+      left: 2px;
+      bottom: -8px; }
+      @media screen and (max-width: 768px) {
+        .nav__link.active:after {
+          display: none; } }
+  .nav__link.lang {
+    border: 1px solid #034638;
+    border-radius: 4px;
+    padding: 7px 8px;
+    line-height: normal; }
+    @media screen and (max-width: 768px) {
+      .nav__link.lang {
+        border: none;
+        padding: 0; } }
+  .nav__link.logo {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 8px; }
+    .nav__link.logo img {
+      height: 30px; }
+      @media screen and (max-width: 768px) {
+        .nav__link.logo img {
+          grid-template-columns: auto auto;
+          justify-content: space-between; } }
+
+.nav__logo {
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: normal;
+  display: grid;
+  justify-self: start;
+  align-items: stretch;
+  align-content: space-between;
+  font-size: 12px;
+  line-height: 16px; }
+  .nav__logo span:last-of-type {
+    align-self: end; }
+
+.nav__menu {
+  display: none;
+  transition: all 0.1s ease;
+  position: absolute;
+  top: 16px;
+  right: 16px; }
+  @media screen and (max-width: 768px) {
+    .nav__menu {
+      display: block;
+      border-radius: 50%;
+      border: none;
+      height: 48px;
+      width: 48px;
+      background-color: #034638;
+      background-image: url(../img/menu-open.png);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      justify-self: end; }
+      .nav__menu.close {
+        background-image: url(../img/menu-close.png);
+        background-size: 30%; } }
+
+.nav__list-wrapper {
+  display: block !important; }
+  @media screen and (max-width: 768px) {
+    .nav__list-wrapper {
+      display: none !important; } }
+
+@media screen and (max-width: 1024px) {
+  .nav__list {
+    grid-gap: 45px; } }
+
+@media screen and (max-width: 940px) {
+  .nav__list {
+    grid-gap: 35px; } }
+
+@media screen and (max-width: 900px) {
+  .nav__list {
+    grid-gap: 25px; } }
+
+@media screen and (max-width: 860px) {
+  .nav__list {
+    grid-gap: 15px; } }
+
+@media screen and (max-width: 815px) {
+  .nav__list {
+    grid-gap: 4px; } }
+
+@media screen and (max-width: 768px) {
+  .nav__list {
+    margin-top: 20px;
+    grid-template-columns: 1fr;
+    justify-self: start;
+    grid-gap: 16px;
+    justify-content: start; }
+    .nav__list .nav__item:not(.nav__item--dropdown) {
+      background-color: #ffffff;
+      border-radius: 8px; }
+      .nav__list .nav__item:not(.nav__item--dropdown) .nav__link {
+        font-size: 18px;
+        font-weight: 700;
+        color: #000000;
+        padding: 16px;
+        display: grid; }
+    .nav__list .nav__item--dropdown {
+      padding: 0; }
+      .nav__list .nav__item--dropdown .nav__link {
+        color: #034638;
+        font-size: 16px; }
+    .nav__list .nav__dropdown {
+      position: static;
+      display: grid;
+      border-radius: 8px;
+      margin-top: 8px; }
+    .nav__list .nav__dropdown-item {
+      padding: 0px; } }
+
+.nav__item--dropdown:focus-within {
+  background-color: #ffffff; }
+  .nav__item--dropdown:focus-within .nav__dropdown {
+    display: grid; }
+
+.footer {
+  background-color: #000000; }
+  .footer__wrapper {
+    color: #ffffff;
+    max-width: 1024px;
+    padding: 24px 40px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 40px; }
+    @media screen and (max-width: 768px) {
+      .footer__wrapper {
+        padding: 16px; } }
+  .footer__comments {
+    justify-self: center;
+    display: grid;
+    grid-gap: 10px; }
+    @media screen and (max-width: 768px) {
+      .footer__comments {
+        justify-self: start; } }
+  .footer__comments-title span {
+    margin-left: 20px;
+    line-height: 36px;
+    vertical-align: bottom;
+    font-weight: 700; }
+  .footer__nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid #5c5c5c;
+    padding-top: 40px; }
+    @media screen and (max-width: 768px) {
+      .footer__nav {
+        grid-template-columns: 1fr;
+        grid-gap: 10px; } }
+  .footer__item {
+    display: grid;
+    align-self: start;
+    grid-gap: 10px; }
+    .footer__item:nth-of-type(3) .footer__link {
+      color: #808080; }
+  .footer__link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700; }
+    .footer__link.btn__action--external {
+      display: block; }
+      .footer__link.btn__action--external::after {
+        background-image: url(../img/arrow-grey.png); }
+  .footer__copy--copy {
+    color: #808080;
+    font-size: 12px;
+    line-height: 16px; }
+  .footer iframe {
+    text-align: center; }
+
+.footer svg {
+  width: 36px;
+  fill: #ffffff; }
+
+.footer a {
+  color: #ffffff; }
+
+/* Disable body scrolling */
+.no-scroll {
+  height: 100vh;
+  overflow-y: hidden; }
+  @media screen and (max-width: 768px) {
+    .no-scroll {
+      position: fixed; } }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */ }
+  .modal__content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    display: grid;
+    grid-gap: 20px; }
+  .modal__close {
+    border-radius: 50%;
+    background-color: #034638;
+    padding: 16px;
+    line-height: 0px;
+    color: #d5e739;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    justify-self: end;
+    display: inline-block;
+    position: relative; }
+    .modal__close::after {
+      position: absolute;
+      content: "×";
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .modal__close:hover, .modal__close:focus {
+      text-decoration: none;
+      cursor: pointer; }
+  .modal__btn {
+    justify-self: start;
+    border: none;
+    justify-self: center;
+    min-width: 50%; }
+  .modal__copy {
+    margin-bottom: 1em;
+    justify-self: center;
+    text-align: center; }
+  .modal__heading {
+    justify-self: center;
+    margin-bottom: 0;
+    font-size: 25px;
+    margin-top: -20px; }
+
+.step {
+  display: grid;
+  grid-gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #d9d9d9; }
+  .step:nth-of-type(2) {
+    padding-top: 0; }
+  .step:last-of-type {
+    border-bottom: none;
+    padding-bottom: 0; }
+  .step__route {
+    font-size: 14px;
+    line-height: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 16px; }
+    .step__route--icons {
+      display: grid;
+      grid-template-rows: auto 0.8fr auto; }
+    .step__route--icon {
+      display: block; }
+      .step__route--icon:first-child {
+        align-self: end; }
+      .step__route--icon:last-child {
+        align-self: start; }
+      .step__route--icon--line {
+        width: 4px;
+        justify-self: center;
+        margin-top: -2px;
+        margin-bottom: -2px; }
+    .step__route--stops {
+      display: grid;
+      grid-gap: 10px;
+      grid-template-rows: auto 1fr auto; }
+    .step__route--start, .step__route--end {
+      display: block; }
+    .step__route--end {
+      align-self: end; }
+  .step.mode-transfer {
+    align-items: center; }
+    .step.mode-transfer .step__route {
+      display: none; }
+    .step.mode-transfer .step__price {
+      display: none; }
+    .step.mode-transfer .step__details {
+      align-self: center; }
+    .step.mode-transfer .step__icon:empty {
+      visibility: hidden !important; }
+  .step__header {
+    display: grid;
+    grid-template-columns: repeat(3, auto) 1fr;
+    grid-gap: 10px;
+    grid-row-gap: 0px;
+    align-items: start; }
+  .step__mode--icon {
+    align-self: center; }
+    @media screen and (max-width: 768px) {
+      .step__mode--icon {
+        margin-top: 3px; } }
+    .step__mode--icon svg {
+      width: 100%;
+      height: 100%;
+      width: 18px;
+      height: 18px;
+      margin-right: 2px; }
+    .step__mode--icon g,
+    .step__mode--icon rect,
+    .step__mode--icon path,
+    .step__mode--icon circle {
+      fill: #5c5c5c; }
+  .step__name--sub-heading {
+    display: block;
+    font-weight: normal;
+    color: #5c5c5c;
+    margin: 0;
+    margin-top: -12px;
+    grid-column: 2 / -1; }
+    @media screen and (max-width: 768px) {
+      .step__name--sub-heading {
+        margin-top: 0px; } }
+  @media screen and (max-width: 768px) {
+    .step__icon {
+      justify-self: end; } }
+  .step__details {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr;
+    font-weight: normal;
+    text-transform: none;
+    justify-items: end; }
+    @media screen and (max-width: 768px) {
+      .step__details {
+        order: 5;
+        grid-column: 2 / 4;
+        grid-row: 3 / 3;
+        justify-self: start;
+        grid-template-columns: auto auto; } }
+  .step__price .mobile-price {
+    display: none; }
+  @media screen and (max-width: 768px) {
+    .step__price .mobile-price,
+    .step__price .js-price-divider {
+      display: inline-block; } }
+
+.step.mode-metro .step__icon, .step.mode-train .step__icon, .step.mode-transfer .step__icon, .step.mode-taxi .step__icon,
+.itinerary__map--icon.mode-metro .step__icon,
+.itinerary__map--icon.mode-train .step__icon,
+.itinerary__map--icon.mode-transfer .step__icon,
+.itinerary__map--icon.mode-taxi .step__icon {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 4px; }
+  .step.mode-metro .step__icon:empty, .step.mode-train .step__icon:empty, .step.mode-transfer .step__icon:empty, .step.mode-taxi .step__icon:empty,
+  .itinerary__map--icon.mode-metro .step__icon:empty,
+  .itinerary__map--icon.mode-train .step__icon:empty,
+  .itinerary__map--icon.mode-transfer .step__icon:empty,
+  .itinerary__map--icon.mode-taxi .step__icon:empty {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%; }
+
+.step.mode-bus .step__icon,
+.itinerary__map--icon.mode-bus .step__icon {
+  display: inline-block;
+  padding: 6px;
+  border-radius: 4px; }
+
+.step__icon,
+.itinerary__map--icon__icon {
+  margin: 0;
+  line-height: 10px;
+  font-weight: 700; }
+
+.step.hex-ee7e00 .step__icon,
+.step.hex-ee7e00 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-ee7e00 .step__icon,
+.itinerary__map--icon.hex-ee7e00 .itinerary__map--icon-nested {
+  background-color: #ee7e00;
+  color: #000000; }
+  .step.hex-ee7e00 .step__icon g,
+  .step.hex-ee7e00 .step__icon rect,
+  .step.hex-ee7e00 .step__icon path,
+  .step.hex-ee7e00 .step__icon circle,
+  .step.hex-ee7e00 .itinerary__map--icon-nested g,
+  .step.hex-ee7e00 .itinerary__map--icon-nested rect,
+  .step.hex-ee7e00 .itinerary__map--icon-nested path,
+  .step.hex-ee7e00 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-ee7e00 .step__icon g,
+  .itinerary__map--icon.hex-ee7e00 .step__icon rect,
+  .itinerary__map--icon.hex-ee7e00 .step__icon path,
+  .itinerary__map--icon.hex-ee7e00 .step__icon circle,
+  .itinerary__map--icon.hex-ee7e00 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-ee7e00 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-ee7e00 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-ee7e00 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-ee7e00 .step__route--icons g,
+.step.hex-ee7e00 .step__route--icons rect,
+.step.hex-ee7e00 .step__route--icons path,
+.step.hex-ee7e00 .step__route--icons circle,
+.itinerary__map--icon.hex-ee7e00 .step__route--icons g,
+.itinerary__map--icon.hex-ee7e00 .step__route--icons rect,
+.itinerary__map--icon.hex-ee7e00 .step__route--icons path,
+.itinerary__map--icon.hex-ee7e00 .step__route--icons circle {
+  fill: #ee7e00; }
+
+.step.hex-ee7e00 .step__route--icons span,
+.itinerary__map--icon.hex-ee7e00 .step__route--icons span {
+  background-color: #ee7e00; }
+
+.step.hex-0e67a4 .step__icon,
+.step.hex-0e67a4 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-0e67a4 .step__icon,
+.itinerary__map--icon.hex-0e67a4 .itinerary__map--icon-nested {
+  background-color: #0e67a4;
+  color: #ffffff; }
+  .step.hex-0e67a4 .step__icon g,
+  .step.hex-0e67a4 .step__icon rect,
+  .step.hex-0e67a4 .step__icon path,
+  .step.hex-0e67a4 .step__icon circle,
+  .step.hex-0e67a4 .itinerary__map--icon-nested g,
+  .step.hex-0e67a4 .itinerary__map--icon-nested rect,
+  .step.hex-0e67a4 .itinerary__map--icon-nested path,
+  .step.hex-0e67a4 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-0e67a4 .step__icon g,
+  .itinerary__map--icon.hex-0e67a4 .step__icon rect,
+  .itinerary__map--icon.hex-0e67a4 .step__icon path,
+  .itinerary__map--icon.hex-0e67a4 .step__icon circle,
+  .itinerary__map--icon.hex-0e67a4 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-0e67a4 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-0e67a4 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-0e67a4 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-0e67a4 .step__route--icons g,
+.step.hex-0e67a4 .step__route--icons rect,
+.step.hex-0e67a4 .step__route--icons path,
+.step.hex-0e67a4 .step__route--icons circle,
+.itinerary__map--icon.hex-0e67a4 .step__route--icons g,
+.itinerary__map--icon.hex-0e67a4 .step__route--icons rect,
+.itinerary__map--icon.hex-0e67a4 .step__route--icons path,
+.itinerary__map--icon.hex-0e67a4 .step__route--icons circle {
+  fill: #0e67a4; }
+
+.step.hex-0e67a4 .step__route--icons span,
+.itinerary__map--icon.hex-0e67a4 .step__route--icons span {
+  background-color: #0e67a4; }
+
+.step.hex-dd488c .step__icon,
+.step.hex-dd488c .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-dd488c .step__icon,
+.itinerary__map--icon.hex-dd488c .itinerary__map--icon-nested {
+  background-color: #dd488c;
+  color: #ffffff; }
+  .step.hex-dd488c .step__icon g,
+  .step.hex-dd488c .step__icon rect,
+  .step.hex-dd488c .step__icon path,
+  .step.hex-dd488c .step__icon circle,
+  .step.hex-dd488c .itinerary__map--icon-nested g,
+  .step.hex-dd488c .itinerary__map--icon-nested rect,
+  .step.hex-dd488c .itinerary__map--icon-nested path,
+  .step.hex-dd488c .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-dd488c .step__icon g,
+  .itinerary__map--icon.hex-dd488c .step__icon rect,
+  .itinerary__map--icon.hex-dd488c .step__icon path,
+  .itinerary__map--icon.hex-dd488c .step__icon circle,
+  .itinerary__map--icon.hex-dd488c .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-dd488c .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-dd488c .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-dd488c .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-dd488c .step__route--icons g,
+.step.hex-dd488c .step__route--icons rect,
+.step.hex-dd488c .step__route--icons path,
+.step.hex-dd488c .step__route--icons circle,
+.itinerary__map--icon.hex-dd488c .step__route--icons g,
+.itinerary__map--icon.hex-dd488c .step__route--icons rect,
+.itinerary__map--icon.hex-dd488c .step__route--icons path,
+.itinerary__map--icon.hex-dd488c .step__route--icons circle {
+  fill: #dd488c; }
+
+.step.hex-dd488c .step__route--icons span,
+.itinerary__map--icon.hex-dd488c .step__route--icons span {
+  background-color: #dd488c; }
+
+.step.hex-a2d5ca .step__icon,
+.step.hex-a2d5ca .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-a2d5ca .step__icon,
+.itinerary__map--icon.hex-a2d5ca .itinerary__map--icon-nested {
+  background-color: #a2d5ca;
+  color: #000000; }
+  .step.hex-a2d5ca .step__icon g,
+  .step.hex-a2d5ca .step__icon rect,
+  .step.hex-a2d5ca .step__icon path,
+  .step.hex-a2d5ca .step__icon circle,
+  .step.hex-a2d5ca .itinerary__map--icon-nested g,
+  .step.hex-a2d5ca .itinerary__map--icon-nested rect,
+  .step.hex-a2d5ca .itinerary__map--icon-nested path,
+  .step.hex-a2d5ca .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-a2d5ca .step__icon g,
+  .itinerary__map--icon.hex-a2d5ca .step__icon rect,
+  .itinerary__map--icon.hex-a2d5ca .step__icon path,
+  .itinerary__map--icon.hex-a2d5ca .step__icon circle,
+  .itinerary__map--icon.hex-a2d5ca .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-a2d5ca .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-a2d5ca .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-a2d5ca .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-a2d5ca .step__route--icons g,
+.step.hex-a2d5ca .step__route--icons rect,
+.step.hex-a2d5ca .step__route--icons path,
+.step.hex-a2d5ca .step__route--icons circle,
+.itinerary__map--icon.hex-a2d5ca .step__route--icons g,
+.itinerary__map--icon.hex-a2d5ca .step__route--icons rect,
+.itinerary__map--icon.hex-a2d5ca .step__route--icons path,
+.itinerary__map--icon.hex-a2d5ca .step__route--icons circle {
+  fill: #a2d5ca; }
+
+.step.hex-a2d5ca .step__route--icons span,
+.itinerary__map--icon.hex-a2d5ca .step__route--icons span {
+  background-color: #a2d5ca; }
+
+.step.hex-c0da93 .step__icon,
+.step.hex-c0da93 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-c0da93 .step__icon,
+.itinerary__map--icon.hex-c0da93 .itinerary__map--icon-nested {
+  background-color: #c0da93;
+  color: #000000; }
+  .step.hex-c0da93 .step__icon g,
+  .step.hex-c0da93 .step__icon rect,
+  .step.hex-c0da93 .step__icon path,
+  .step.hex-c0da93 .step__icon circle,
+  .step.hex-c0da93 .itinerary__map--icon-nested g,
+  .step.hex-c0da93 .itinerary__map--icon-nested rect,
+  .step.hex-c0da93 .itinerary__map--icon-nested path,
+  .step.hex-c0da93 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-c0da93 .step__icon g,
+  .itinerary__map--icon.hex-c0da93 .step__icon rect,
+  .itinerary__map--icon.hex-c0da93 .step__icon path,
+  .itinerary__map--icon.hex-c0da93 .step__icon circle,
+  .itinerary__map--icon.hex-c0da93 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-c0da93 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-c0da93 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-c0da93 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-c0da93 .step__route--icons g,
+.step.hex-c0da93 .step__route--icons rect,
+.step.hex-c0da93 .step__route--icons path,
+.step.hex-c0da93 .step__route--icons circle,
+.itinerary__map--icon.hex-c0da93 .step__route--icons g,
+.itinerary__map--icon.hex-c0da93 .step__route--icons rect,
+.itinerary__map--icon.hex-c0da93 .step__route--icons path,
+.itinerary__map--icon.hex-c0da93 .step__route--icons circle {
+  fill: #c0da93; }
+
+.step.hex-c0da93 .step__route--icons span,
+.itinerary__map--icon.hex-c0da93 .step__route--icons span {
+  background-color: #c0da93; }
+
+.step.hex-76b830 .step__icon,
+.step.hex-76b830 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-76b830 .step__icon,
+.itinerary__map--icon.hex-76b830 .itinerary__map--icon-nested {
+  background-color: #76b830;
+  color: #000000; }
+  .step.hex-76b830 .step__icon g,
+  .step.hex-76b830 .step__icon rect,
+  .step.hex-76b830 .step__icon path,
+  .step.hex-76b830 .step__icon circle,
+  .step.hex-76b830 .itinerary__map--icon-nested g,
+  .step.hex-76b830 .itinerary__map--icon-nested rect,
+  .step.hex-76b830 .itinerary__map--icon-nested path,
+  .step.hex-76b830 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-76b830 .step__icon g,
+  .itinerary__map--icon.hex-76b830 .step__icon rect,
+  .itinerary__map--icon.hex-76b830 .step__icon path,
+  .itinerary__map--icon.hex-76b830 .step__icon circle,
+  .itinerary__map--icon.hex-76b830 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-76b830 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-76b830 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-76b830 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-76b830 .step__route--icons g,
+.step.hex-76b830 .step__route--icons rect,
+.step.hex-76b830 .step__route--icons path,
+.step.hex-76b830 .step__route--icons circle,
+.itinerary__map--icon.hex-76b830 .step__route--icons g,
+.itinerary__map--icon.hex-76b830 .step__route--icons rect,
+.itinerary__map--icon.hex-76b830 .step__route--icons path,
+.itinerary__map--icon.hex-76b830 .step__route--icons circle {
+  fill: #76b830; }
+
+.step.hex-76b830 .step__route--icons span,
+.itinerary__map--icon.hex-76b830 .step__route--icons span {
+  background-color: #76b830; }
+
+.step.hex-27b6f1 .step__icon,
+.step.hex-27b6f1 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-27b6f1 .step__icon,
+.itinerary__map--icon.hex-27b6f1 .itinerary__map--icon-nested {
+  background-color: #27b6f1;
+  color: #000000; }
+  .step.hex-27b6f1 .step__icon g,
+  .step.hex-27b6f1 .step__icon rect,
+  .step.hex-27b6f1 .step__icon path,
+  .step.hex-27b6f1 .step__icon circle,
+  .step.hex-27b6f1 .itinerary__map--icon-nested g,
+  .step.hex-27b6f1 .itinerary__map--icon-nested rect,
+  .step.hex-27b6f1 .itinerary__map--icon-nested path,
+  .step.hex-27b6f1 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-27b6f1 .step__icon g,
+  .itinerary__map--icon.hex-27b6f1 .step__icon rect,
+  .itinerary__map--icon.hex-27b6f1 .step__icon path,
+  .itinerary__map--icon.hex-27b6f1 .step__icon circle,
+  .itinerary__map--icon.hex-27b6f1 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-27b6f1 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-27b6f1 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-27b6f1 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-27b6f1 .step__route--icons g,
+.step.hex-27b6f1 .step__route--icons rect,
+.step.hex-27b6f1 .step__route--icons path,
+.step.hex-27b6f1 .step__route--icons circle,
+.itinerary__map--icon.hex-27b6f1 .step__route--icons g,
+.itinerary__map--icon.hex-27b6f1 .step__route--icons rect,
+.itinerary__map--icon.hex-27b6f1 .step__route--icons path,
+.itinerary__map--icon.hex-27b6f1 .step__route--icons circle {
+  fill: #27b6f1; }
+
+.step.hex-27b6f1 .step__route--icons span,
+.itinerary__map--icon.hex-27b6f1 .step__route--icons span {
+  background-color: #27b6f1; }
+
+.step.hex-cb5799 .step__icon,
+.step.hex-cb5799 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-cb5799 .step__icon,
+.itinerary__map--icon.hex-cb5799 .itinerary__map--icon-nested {
+  background-color: #cb5799;
+  color: #ffffff; }
+  .step.hex-cb5799 .step__icon g,
+  .step.hex-cb5799 .step__icon rect,
+  .step.hex-cb5799 .step__icon path,
+  .step.hex-cb5799 .step__icon circle,
+  .step.hex-cb5799 .itinerary__map--icon-nested g,
+  .step.hex-cb5799 .itinerary__map--icon-nested rect,
+  .step.hex-cb5799 .itinerary__map--icon-nested path,
+  .step.hex-cb5799 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-cb5799 .step__icon g,
+  .itinerary__map--icon.hex-cb5799 .step__icon rect,
+  .itinerary__map--icon.hex-cb5799 .step__icon path,
+  .itinerary__map--icon.hex-cb5799 .step__icon circle,
+  .itinerary__map--icon.hex-cb5799 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-cb5799 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-cb5799 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-cb5799 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-cb5799 .step__route--icons g,
+.step.hex-cb5799 .step__route--icons rect,
+.step.hex-cb5799 .step__route--icons path,
+.step.hex-cb5799 .step__route--icons circle,
+.itinerary__map--icon.hex-cb5799 .step__route--icons g,
+.itinerary__map--icon.hex-cb5799 .step__route--icons rect,
+.itinerary__map--icon.hex-cb5799 .step__route--icons path,
+.itinerary__map--icon.hex-cb5799 .step__route--icons circle {
+  fill: #cb5799; }
+
+.step.hex-cb5799 .step__route--icons span,
+.itinerary__map--icon.hex-cb5799 .step__route--icons span {
+  background-color: #cb5799; }
+
+.step.hex-b9732c .step__icon,
+.step.hex-b9732c .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-b9732c .step__icon,
+.itinerary__map--icon.hex-b9732c .itinerary__map--icon-nested {
+  background-color: #b9732c;
+  color: #000000; }
+  .step.hex-b9732c .step__icon g,
+  .step.hex-b9732c .step__icon rect,
+  .step.hex-b9732c .step__icon path,
+  .step.hex-b9732c .step__icon circle,
+  .step.hex-b9732c .itinerary__map--icon-nested g,
+  .step.hex-b9732c .itinerary__map--icon-nested rect,
+  .step.hex-b9732c .itinerary__map--icon-nested path,
+  .step.hex-b9732c .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-b9732c .step__icon g,
+  .itinerary__map--icon.hex-b9732c .step__icon rect,
+  .itinerary__map--icon.hex-b9732c .step__icon path,
+  .itinerary__map--icon.hex-b9732c .step__icon circle,
+  .itinerary__map--icon.hex-b9732c .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-b9732c .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-b9732c .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-b9732c .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-b9732c .step__route--icons g,
+.step.hex-b9732c .step__route--icons rect,
+.step.hex-b9732c .step__route--icons path,
+.step.hex-b9732c .step__route--icons circle,
+.itinerary__map--icon.hex-b9732c .step__route--icons g,
+.itinerary__map--icon.hex-b9732c .step__route--icons rect,
+.itinerary__map--icon.hex-b9732c .step__route--icons path,
+.itinerary__map--icon.hex-b9732c .step__route--icons circle {
+  fill: #b9732c; }
+
+.step.hex-b9732c .step__route--icons span,
+.itinerary__map--icon.hex-b9732c .step__route--icons span {
+  background-color: #b9732c; }
+
+.step.hex-92aecf .step__icon,
+.step.hex-92aecf .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-92aecf .step__icon,
+.itinerary__map--icon.hex-92aecf .itinerary__map--icon-nested {
+  background-color: #92aecf;
+  color: #000000; }
+  .step.hex-92aecf .step__icon g,
+  .step.hex-92aecf .step__icon rect,
+  .step.hex-92aecf .step__icon path,
+  .step.hex-92aecf .step__icon circle,
+  .step.hex-92aecf .itinerary__map--icon-nested g,
+  .step.hex-92aecf .itinerary__map--icon-nested rect,
+  .step.hex-92aecf .itinerary__map--icon-nested path,
+  .step.hex-92aecf .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-92aecf .step__icon g,
+  .itinerary__map--icon.hex-92aecf .step__icon rect,
+  .itinerary__map--icon.hex-92aecf .step__icon path,
+  .itinerary__map--icon.hex-92aecf .step__icon circle,
+  .itinerary__map--icon.hex-92aecf .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-92aecf .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-92aecf .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-92aecf .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-92aecf .step__route--icons g,
+.step.hex-92aecf .step__route--icons rect,
+.step.hex-92aecf .step__route--icons path,
+.step.hex-92aecf .step__route--icons circle,
+.itinerary__map--icon.hex-92aecf .step__route--icons g,
+.itinerary__map--icon.hex-92aecf .step__route--icons rect,
+.itinerary__map--icon.hex-92aecf .step__route--icons path,
+.itinerary__map--icon.hex-92aecf .step__route--icons circle {
+  fill: #92aecf; }
+
+.step.hex-92aecf .step__route--icons span,
+.itinerary__map--icon.hex-92aecf .step__route--icons span {
+  background-color: #92aecf; }
+
+.step.hex-6460ab .step__icon,
+.step.hex-6460ab .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-6460ab .step__icon,
+.itinerary__map--icon.hex-6460ab .itinerary__map--icon-nested {
+  background-color: #6460ab;
+  color: #ffffff; }
+  .step.hex-6460ab .step__icon g,
+  .step.hex-6460ab .step__icon rect,
+  .step.hex-6460ab .step__icon path,
+  .step.hex-6460ab .step__icon circle,
+  .step.hex-6460ab .itinerary__map--icon-nested g,
+  .step.hex-6460ab .itinerary__map--icon-nested rect,
+  .step.hex-6460ab .itinerary__map--icon-nested path,
+  .step.hex-6460ab .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-6460ab .step__icon g,
+  .itinerary__map--icon.hex-6460ab .step__icon rect,
+  .itinerary__map--icon.hex-6460ab .step__icon path,
+  .itinerary__map--icon.hex-6460ab .step__icon circle,
+  .itinerary__map--icon.hex-6460ab .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-6460ab .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-6460ab .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-6460ab .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-6460ab .step__route--icons g,
+.step.hex-6460ab .step__route--icons rect,
+.step.hex-6460ab .step__route--icons path,
+.step.hex-6460ab .step__route--icons circle,
+.itinerary__map--icon.hex-6460ab .step__route--icons g,
+.itinerary__map--icon.hex-6460ab .step__route--icons rect,
+.itinerary__map--icon.hex-6460ab .step__route--icons path,
+.itinerary__map--icon.hex-6460ab .step__route--icons circle {
+  fill: #6460ab; }
+
+.step.hex-6460ab .step__route--icons span,
+.itinerary__map--icon.hex-6460ab .step__route--icons span {
+  background-color: #6460ab; }
+
+.step.hex-f4c900 .step__icon,
+.step.hex-f4c900 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-f4c900 .step__icon,
+.itinerary__map--icon.hex-f4c900 .itinerary__map--icon-nested {
+  background-color: #f4c900;
+  color: #000000; }
+  .step.hex-f4c900 .step__icon g,
+  .step.hex-f4c900 .step__icon rect,
+  .step.hex-f4c900 .step__icon path,
+  .step.hex-f4c900 .step__icon circle,
+  .step.hex-f4c900 .itinerary__map--icon-nested g,
+  .step.hex-f4c900 .itinerary__map--icon-nested rect,
+  .step.hex-f4c900 .itinerary__map--icon-nested path,
+  .step.hex-f4c900 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-f4c900 .step__icon g,
+  .itinerary__map--icon.hex-f4c900 .step__icon rect,
+  .itinerary__map--icon.hex-f4c900 .step__icon path,
+  .itinerary__map--icon.hex-f4c900 .step__icon circle,
+  .itinerary__map--icon.hex-f4c900 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-f4c900 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-f4c900 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-f4c900 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-f4c900 .step__route--icons g,
+.step.hex-f4c900 .step__route--icons rect,
+.step.hex-f4c900 .step__route--icons path,
+.step.hex-f4c900 .step__route--icons circle,
+.itinerary__map--icon.hex-f4c900 .step__route--icons g,
+.itinerary__map--icon.hex-f4c900 .step__route--icons rect,
+.itinerary__map--icon.hex-f4c900 .step__route--icons path,
+.itinerary__map--icon.hex-f4c900 .step__route--icons circle {
+  fill: #f4c900; }
+
+.step.hex-f4c900 .step__route--icons span,
+.itinerary__map--icon.hex-f4c900 .step__route--icons span {
+  background-color: #f4c900; }
+
+.step.hex-2ba651 .step__icon,
+.step.hex-2ba651 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-2ba651 .step__icon,
+.itinerary__map--icon.hex-2ba651 .itinerary__map--icon-nested {
+  background-color: #2ba651;
+  color: #000000; }
+  .step.hex-2ba651 .step__icon g,
+  .step.hex-2ba651 .step__icon rect,
+  .step.hex-2ba651 .step__icon path,
+  .step.hex-2ba651 .step__icon circle,
+  .step.hex-2ba651 .itinerary__map--icon-nested g,
+  .step.hex-2ba651 .itinerary__map--icon-nested rect,
+  .step.hex-2ba651 .itinerary__map--icon-nested path,
+  .step.hex-2ba651 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-2ba651 .step__icon g,
+  .itinerary__map--icon.hex-2ba651 .step__icon rect,
+  .itinerary__map--icon.hex-2ba651 .step__icon path,
+  .itinerary__map--icon.hex-2ba651 .step__icon circle,
+  .itinerary__map--icon.hex-2ba651 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-2ba651 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-2ba651 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-2ba651 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-2ba651 .step__route--icons g,
+.step.hex-2ba651 .step__route--icons rect,
+.step.hex-2ba651 .step__route--icons path,
+.step.hex-2ba651 .step__route--icons circle,
+.itinerary__map--icon.hex-2ba651 .step__route--icons g,
+.itinerary__map--icon.hex-2ba651 .step__route--icons rect,
+.itinerary__map--icon.hex-2ba651 .step__route--icons path,
+.itinerary__map--icon.hex-2ba651 .step__route--icons circle {
+  fill: #2ba651; }
+
+.step.hex-2ba651 .step__route--icons span,
+.itinerary__map--icon.hex-2ba651 .step__route--icons span {
+  background-color: #2ba651; }
+
+.step.hex-dc3e34 .step__icon,
+.step.hex-dc3e34 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-dc3e34 .step__icon,
+.itinerary__map--icon.hex-dc3e34 .itinerary__map--icon-nested {
+  background-color: #dc3e34;
+  color: #000000; }
+  .step.hex-dc3e34 .step__icon g,
+  .step.hex-dc3e34 .step__icon rect,
+  .step.hex-dc3e34 .step__icon path,
+  .step.hex-dc3e34 .step__icon circle,
+  .step.hex-dc3e34 .itinerary__map--icon-nested g,
+  .step.hex-dc3e34 .itinerary__map--icon-nested rect,
+  .step.hex-dc3e34 .itinerary__map--icon-nested path,
+  .step.hex-dc3e34 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-dc3e34 .step__icon g,
+  .itinerary__map--icon.hex-dc3e34 .step__icon rect,
+  .itinerary__map--icon.hex-dc3e34 .step__icon path,
+  .itinerary__map--icon.hex-dc3e34 .step__icon circle,
+  .itinerary__map--icon.hex-dc3e34 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-dc3e34 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-dc3e34 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-dc3e34 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-dc3e34 .step__route--icons g,
+.step.hex-dc3e34 .step__route--icons rect,
+.step.hex-dc3e34 .step__route--icons path,
+.step.hex-dc3e34 .step__route--icons circle,
+.itinerary__map--icon.hex-dc3e34 .step__route--icons g,
+.itinerary__map--icon.hex-dc3e34 .step__route--icons rect,
+.itinerary__map--icon.hex-dc3e34 .step__route--icons path,
+.itinerary__map--icon.hex-dc3e34 .step__route--icons circle {
+  fill: #dc3e34; }
+
+.step.hex-dc3e34 .step__route--icons span,
+.itinerary__map--icon.hex-dc3e34 .step__route--icons span {
+  background-color: #dc3e34; }
+
+.step.hex-88cfe8 .step__icon,
+.step.hex-88cfe8 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-88cfe8 .step__icon,
+.itinerary__map--icon.hex-88cfe8 .itinerary__map--icon-nested {
+  background-color: #88cfe8;
+  color: #000000; }
+  .step.hex-88cfe8 .step__icon g,
+  .step.hex-88cfe8 .step__icon rect,
+  .step.hex-88cfe8 .step__icon path,
+  .step.hex-88cfe8 .step__icon circle,
+  .step.hex-88cfe8 .itinerary__map--icon-nested g,
+  .step.hex-88cfe8 .itinerary__map--icon-nested rect,
+  .step.hex-88cfe8 .itinerary__map--icon-nested path,
+  .step.hex-88cfe8 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-88cfe8 .step__icon g,
+  .itinerary__map--icon.hex-88cfe8 .step__icon rect,
+  .itinerary__map--icon.hex-88cfe8 .step__icon path,
+  .itinerary__map--icon.hex-88cfe8 .step__icon circle,
+  .itinerary__map--icon.hex-88cfe8 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-88cfe8 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-88cfe8 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-88cfe8 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-88cfe8 .step__route--icons g,
+.step.hex-88cfe8 .step__route--icons rect,
+.step.hex-88cfe8 .step__route--icons path,
+.step.hex-88cfe8 .step__route--icons circle,
+.itinerary__map--icon.hex-88cfe8 .step__route--icons g,
+.itinerary__map--icon.hex-88cfe8 .step__route--icons rect,
+.itinerary__map--icon.hex-88cfe8 .step__route--icons path,
+.itinerary__map--icon.hex-88cfe8 .step__route--icons circle {
+  fill: #88cfe8; }
+
+.step.hex-88cfe8 .step__route--icons span,
+.itinerary__map--icon.hex-88cfe8 .step__route--icons span {
+  background-color: #88cfe8; }
+
+.step.hex-b4d383 .step__icon,
+.step.hex-b4d383 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-b4d383 .step__icon,
+.itinerary__map--icon.hex-b4d383 .itinerary__map--icon-nested {
+  background-color: #b4d383;
+  color: #000000; }
+  .step.hex-b4d383 .step__icon g,
+  .step.hex-b4d383 .step__icon rect,
+  .step.hex-b4d383 .step__icon path,
+  .step.hex-b4d383 .step__icon circle,
+  .step.hex-b4d383 .itinerary__map--icon-nested g,
+  .step.hex-b4d383 .itinerary__map--icon-nested rect,
+  .step.hex-b4d383 .itinerary__map--icon-nested path,
+  .step.hex-b4d383 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-b4d383 .step__icon g,
+  .itinerary__map--icon.hex-b4d383 .step__icon rect,
+  .itinerary__map--icon.hex-b4d383 .step__icon path,
+  .itinerary__map--icon.hex-b4d383 .step__icon circle,
+  .itinerary__map--icon.hex-b4d383 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-b4d383 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-b4d383 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-b4d383 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-b4d383 .step__route--icons g,
+.step.hex-b4d383 .step__route--icons rect,
+.step.hex-b4d383 .step__route--icons path,
+.step.hex-b4d383 .step__route--icons circle,
+.itinerary__map--icon.hex-b4d383 .step__route--icons g,
+.itinerary__map--icon.hex-b4d383 .step__route--icons rect,
+.itinerary__map--icon.hex-b4d383 .step__route--icons path,
+.itinerary__map--icon.hex-b4d383 .step__route--icons circle {
+  fill: #b4d383; }
+
+.step.hex-b4d383 .step__route--icons span,
+.itinerary__map--icon.hex-b4d383 .step__route--icons span {
+  background-color: #b4d383; }
+
+.step.hex-8e649e .step__icon,
+.step.hex-8e649e .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-8e649e .step__icon,
+.itinerary__map--icon.hex-8e649e .itinerary__map--icon-nested {
+  background-color: #8e649e;
+  color: #ffffff; }
+  .step.hex-8e649e .step__icon g,
+  .step.hex-8e649e .step__icon rect,
+  .step.hex-8e649e .step__icon path,
+  .step.hex-8e649e .step__icon circle,
+  .step.hex-8e649e .itinerary__map--icon-nested g,
+  .step.hex-8e649e .itinerary__map--icon-nested rect,
+  .step.hex-8e649e .itinerary__map--icon-nested path,
+  .step.hex-8e649e .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-8e649e .step__icon g,
+  .itinerary__map--icon.hex-8e649e .step__icon rect,
+  .itinerary__map--icon.hex-8e649e .step__icon path,
+  .itinerary__map--icon.hex-8e649e .step__icon circle,
+  .itinerary__map--icon.hex-8e649e .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-8e649e .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-8e649e .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-8e649e .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-8e649e .step__route--icons g,
+.step.hex-8e649e .step__route--icons rect,
+.step.hex-8e649e .step__route--icons path,
+.step.hex-8e649e .step__route--icons circle,
+.itinerary__map--icon.hex-8e649e .step__route--icons g,
+.itinerary__map--icon.hex-8e649e .step__route--icons rect,
+.itinerary__map--icon.hex-8e649e .step__route--icons path,
+.itinerary__map--icon.hex-8e649e .step__route--icons circle {
+  fill: #8e649e; }
+
+.step.hex-8e649e .step__route--icons span,
+.itinerary__map--icon.hex-8e649e .step__route--icons span {
+  background-color: #8e649e; }
+
+.step.hex-efa693 .step__icon,
+.step.hex-efa693 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-efa693 .step__icon,
+.itinerary__map--icon.hex-efa693 .itinerary__map--icon-nested {
+  background-color: #efa693;
+  color: #000000; }
+  .step.hex-efa693 .step__icon g,
+  .step.hex-efa693 .step__icon rect,
+  .step.hex-efa693 .step__icon path,
+  .step.hex-efa693 .step__icon circle,
+  .step.hex-efa693 .itinerary__map--icon-nested g,
+  .step.hex-efa693 .itinerary__map--icon-nested rect,
+  .step.hex-efa693 .itinerary__map--icon-nested path,
+  .step.hex-efa693 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-efa693 .step__icon g,
+  .itinerary__map--icon.hex-efa693 .step__icon rect,
+  .itinerary__map--icon.hex-efa693 .step__icon path,
+  .itinerary__map--icon.hex-efa693 .step__icon circle,
+  .itinerary__map--icon.hex-efa693 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-efa693 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-efa693 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-efa693 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-efa693 .step__route--icons g,
+.step.hex-efa693 .step__route--icons rect,
+.step.hex-efa693 .step__route--icons path,
+.step.hex-efa693 .step__route--icons circle,
+.itinerary__map--icon.hex-efa693 .step__route--icons g,
+.itinerary__map--icon.hex-efa693 .step__route--icons rect,
+.itinerary__map--icon.hex-efa693 .step__route--icons path,
+.itinerary__map--icon.hex-efa693 .step__route--icons circle {
+  fill: #efa693; }
+
+.step.hex-efa693 .step__route--icons span,
+.itinerary__map--icon.hex-efa693 .step__route--icons span {
+  background-color: #efa693; }
+
+.step.hex-be4589 .step__icon,
+.step.hex-be4589 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-be4589 .step__icon,
+.itinerary__map--icon.hex-be4589 .itinerary__map--icon-nested {
+  background-color: #be4589;
+  color: #ffffff; }
+  .step.hex-be4589 .step__icon g,
+  .step.hex-be4589 .step__icon rect,
+  .step.hex-be4589 .step__icon path,
+  .step.hex-be4589 .step__icon circle,
+  .step.hex-be4589 .itinerary__map--icon-nested g,
+  .step.hex-be4589 .itinerary__map--icon-nested rect,
+  .step.hex-be4589 .itinerary__map--icon-nested path,
+  .step.hex-be4589 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-be4589 .step__icon g,
+  .itinerary__map--icon.hex-be4589 .step__icon rect,
+  .itinerary__map--icon.hex-be4589 .step__icon path,
+  .itinerary__map--icon.hex-be4589 .step__icon circle,
+  .itinerary__map--icon.hex-be4589 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-be4589 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-be4589 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-be4589 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-be4589 .step__route--icons g,
+.step.hex-be4589 .step__route--icons rect,
+.step.hex-be4589 .step__route--icons path,
+.step.hex-be4589 .step__route--icons circle,
+.itinerary__map--icon.hex-be4589 .step__route--icons g,
+.itinerary__map--icon.hex-be4589 .step__route--icons rect,
+.itinerary__map--icon.hex-be4589 .step__route--icons path,
+.itinerary__map--icon.hex-be4589 .step__route--icons circle {
+  fill: #be4589; }
+
+.step.hex-be4589 .step__route--icons span,
+.itinerary__map--icon.hex-be4589 .step__route--icons span {
+  background-color: #be4589; }
+
+.step.hex-f8e08f .step__icon,
+.step.hex-f8e08f .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-f8e08f .step__icon,
+.itinerary__map--icon.hex-f8e08f .itinerary__map--icon-nested {
+  background-color: #f8e08f;
+  color: #000000; }
+  .step.hex-f8e08f .step__icon g,
+  .step.hex-f8e08f .step__icon rect,
+  .step.hex-f8e08f .step__icon path,
+  .step.hex-f8e08f .step__icon circle,
+  .step.hex-f8e08f .itinerary__map--icon-nested g,
+  .step.hex-f8e08f .itinerary__map--icon-nested rect,
+  .step.hex-f8e08f .itinerary__map--icon-nested path,
+  .step.hex-f8e08f .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-f8e08f .step__icon g,
+  .itinerary__map--icon.hex-f8e08f .step__icon rect,
+  .itinerary__map--icon.hex-f8e08f .step__icon path,
+  .itinerary__map--icon.hex-f8e08f .step__icon circle,
+  .itinerary__map--icon.hex-f8e08f .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-f8e08f .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-f8e08f .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-f8e08f .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-f8e08f .step__route--icons g,
+.step.hex-f8e08f .step__route--icons rect,
+.step.hex-f8e08f .step__route--icons path,
+.step.hex-f8e08f .step__route--icons circle,
+.itinerary__map--icon.hex-f8e08f .step__route--icons g,
+.itinerary__map--icon.hex-f8e08f .step__route--icons rect,
+.itinerary__map--icon.hex-f8e08f .step__route--icons path,
+.itinerary__map--icon.hex-f8e08f .step__route--icons circle {
+  fill: #f8e08f; }
+
+.step.hex-f8e08f .step__route--icons span,
+.itinerary__map--icon.hex-f8e08f .step__route--icons span {
+  background-color: #f8e08f; }
+
+.step.hex-e67e78 .step__icon,
+.step.hex-e67e78 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-e67e78 .step__icon,
+.itinerary__map--icon.hex-e67e78 .itinerary__map--icon-nested {
+  background-color: #e67e78;
+  color: #000000; }
+  .step.hex-e67e78 .step__icon g,
+  .step.hex-e67e78 .step__icon rect,
+  .step.hex-e67e78 .step__icon path,
+  .step.hex-e67e78 .step__icon circle,
+  .step.hex-e67e78 .itinerary__map--icon-nested g,
+  .step.hex-e67e78 .itinerary__map--icon-nested rect,
+  .step.hex-e67e78 .itinerary__map--icon-nested path,
+  .step.hex-e67e78 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-e67e78 .step__icon g,
+  .itinerary__map--icon.hex-e67e78 .step__icon rect,
+  .itinerary__map--icon.hex-e67e78 .step__icon path,
+  .itinerary__map--icon.hex-e67e78 .step__icon circle,
+  .itinerary__map--icon.hex-e67e78 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-e67e78 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-e67e78 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-e67e78 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-e67e78 .step__route--icons g,
+.step.hex-e67e78 .step__route--icons rect,
+.step.hex-e67e78 .step__route--icons path,
+.step.hex-e67e78 .step__route--icons circle,
+.itinerary__map--icon.hex-e67e78 .step__route--icons g,
+.itinerary__map--icon.hex-e67e78 .step__route--icons rect,
+.itinerary__map--icon.hex-e67e78 .step__route--icons path,
+.itinerary__map--icon.hex-e67e78 .step__route--icons circle {
+  fill: #e67e78; }
+
+.step.hex-e67e78 .step__route--icons span,
+.itinerary__map--icon.hex-e67e78 .step__route--icons span {
+  background-color: #e67e78; }
+
+.step.hex-b39fc0 .step__icon,
+.step.hex-b39fc0 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-b39fc0 .step__icon,
+.itinerary__map--icon.hex-b39fc0 .itinerary__map--icon-nested {
+  background-color: #b39fc0;
+  color: #000000; }
+  .step.hex-b39fc0 .step__icon g,
+  .step.hex-b39fc0 .step__icon rect,
+  .step.hex-b39fc0 .step__icon path,
+  .step.hex-b39fc0 .step__icon circle,
+  .step.hex-b39fc0 .itinerary__map--icon-nested g,
+  .step.hex-b39fc0 .itinerary__map--icon-nested rect,
+  .step.hex-b39fc0 .itinerary__map--icon-nested path,
+  .step.hex-b39fc0 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-b39fc0 .step__icon g,
+  .itinerary__map--icon.hex-b39fc0 .step__icon rect,
+  .itinerary__map--icon.hex-b39fc0 .step__icon path,
+  .itinerary__map--icon.hex-b39fc0 .step__icon circle,
+  .itinerary__map--icon.hex-b39fc0 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-b39fc0 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-b39fc0 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-b39fc0 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-b39fc0 .step__route--icons g,
+.step.hex-b39fc0 .step__route--icons rect,
+.step.hex-b39fc0 .step__route--icons path,
+.step.hex-b39fc0 .step__route--icons circle,
+.itinerary__map--icon.hex-b39fc0 .step__route--icons g,
+.itinerary__map--icon.hex-b39fc0 .step__route--icons rect,
+.itinerary__map--icon.hex-b39fc0 .step__route--icons path,
+.itinerary__map--icon.hex-b39fc0 .step__route--icons circle {
+  fill: #b39fc0; }
+
+.step.hex-b39fc0 .step__route--icons span,
+.itinerary__map--icon.hex-b39fc0 .step__route--icons span {
+  background-color: #b39fc0; }
+
+.step.hex-95d1c8 .step__icon,
+.step.hex-95d1c8 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-95d1c8 .step__icon,
+.itinerary__map--icon.hex-95d1c8 .itinerary__map--icon-nested {
+  background-color: #95d1c8;
+  color: #000000; }
+  .step.hex-95d1c8 .step__icon g,
+  .step.hex-95d1c8 .step__icon rect,
+  .step.hex-95d1c8 .step__icon path,
+  .step.hex-95d1c8 .step__icon circle,
+  .step.hex-95d1c8 .itinerary__map--icon-nested g,
+  .step.hex-95d1c8 .itinerary__map--icon-nested rect,
+  .step.hex-95d1c8 .itinerary__map--icon-nested path,
+  .step.hex-95d1c8 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-95d1c8 .step__icon g,
+  .itinerary__map--icon.hex-95d1c8 .step__icon rect,
+  .itinerary__map--icon.hex-95d1c8 .step__icon path,
+  .itinerary__map--icon.hex-95d1c8 .step__icon circle,
+  .itinerary__map--icon.hex-95d1c8 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-95d1c8 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-95d1c8 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-95d1c8 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-95d1c8 .step__route--icons g,
+.step.hex-95d1c8 .step__route--icons rect,
+.step.hex-95d1c8 .step__route--icons path,
+.step.hex-95d1c8 .step__route--icons circle,
+.itinerary__map--icon.hex-95d1c8 .step__route--icons g,
+.itinerary__map--icon.hex-95d1c8 .step__route--icons rect,
+.itinerary__map--icon.hex-95d1c8 .step__route--icons path,
+.itinerary__map--icon.hex-95d1c8 .step__route--icons circle {
+  fill: #95d1c8; }
+
+.step.hex-95d1c8 .step__route--icons span,
+.itinerary__map--icon.hex-95d1c8 .step__route--icons span {
+  background-color: #95d1c8; }
+
+.step.hex-aeaac8 .step__icon,
+.step.hex-aeaac8 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-aeaac8 .step__icon,
+.itinerary__map--icon.hex-aeaac8 .itinerary__map--icon-nested {
+  background-color: #aeaac8;
+  color: #000000; }
+  .step.hex-aeaac8 .step__icon g,
+  .step.hex-aeaac8 .step__icon rect,
+  .step.hex-aeaac8 .step__icon path,
+  .step.hex-aeaac8 .step__icon circle,
+  .step.hex-aeaac8 .itinerary__map--icon-nested g,
+  .step.hex-aeaac8 .itinerary__map--icon-nested rect,
+  .step.hex-aeaac8 .itinerary__map--icon-nested path,
+  .step.hex-aeaac8 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-aeaac8 .step__icon g,
+  .itinerary__map--icon.hex-aeaac8 .step__icon rect,
+  .itinerary__map--icon.hex-aeaac8 .step__icon path,
+  .itinerary__map--icon.hex-aeaac8 .step__icon circle,
+  .itinerary__map--icon.hex-aeaac8 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-aeaac8 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-aeaac8 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-aeaac8 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-aeaac8 .step__route--icons g,
+.step.hex-aeaac8 .step__route--icons rect,
+.step.hex-aeaac8 .step__route--icons path,
+.step.hex-aeaac8 .step__route--icons circle,
+.itinerary__map--icon.hex-aeaac8 .step__route--icons g,
+.itinerary__map--icon.hex-aeaac8 .step__route--icons rect,
+.itinerary__map--icon.hex-aeaac8 .step__route--icons path,
+.itinerary__map--icon.hex-aeaac8 .step__route--icons circle {
+  fill: #aeaac8; }
+
+.step.hex-aeaac8 .step__route--icons span,
+.itinerary__map--icon.hex-aeaac8 .step__route--icons span {
+  background-color: #aeaac8; }
+
+.step.hex-c83c85 .step__icon,
+.step.hex-c83c85 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-c83c85 .step__icon,
+.itinerary__map--icon.hex-c83c85 .itinerary__map--icon-nested {
+  background-color: #c83c85;
+  color: #ffffff; }
+  .step.hex-c83c85 .step__icon g,
+  .step.hex-c83c85 .step__icon rect,
+  .step.hex-c83c85 .step__icon path,
+  .step.hex-c83c85 .step__icon circle,
+  .step.hex-c83c85 .itinerary__map--icon-nested g,
+  .step.hex-c83c85 .itinerary__map--icon-nested rect,
+  .step.hex-c83c85 .itinerary__map--icon-nested path,
+  .step.hex-c83c85 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-c83c85 .step__icon g,
+  .itinerary__map--icon.hex-c83c85 .step__icon rect,
+  .itinerary__map--icon.hex-c83c85 .step__icon path,
+  .itinerary__map--icon.hex-c83c85 .step__icon circle,
+  .itinerary__map--icon.hex-c83c85 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-c83c85 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-c83c85 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-c83c85 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-c83c85 .step__route--icons g,
+.step.hex-c83c85 .step__route--icons rect,
+.step.hex-c83c85 .step__route--icons path,
+.step.hex-c83c85 .step__route--icons circle,
+.itinerary__map--icon.hex-c83c85 .step__route--icons g,
+.itinerary__map--icon.hex-c83c85 .step__route--icons rect,
+.itinerary__map--icon.hex-c83c85 .step__route--icons path,
+.itinerary__map--icon.hex-c83c85 .step__route--icons circle {
+  fill: #c83c85; }
+
+.step.hex-c83c85 .step__route--icons span,
+.itinerary__map--icon.hex-c83c85 .step__route--icons span {
+  background-color: #c83c85; }
+
+.step.hex-efa495 .step__icon,
+.step.hex-efa495 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-efa495 .step__icon,
+.itinerary__map--icon.hex-efa495 .itinerary__map--icon-nested {
+  background-color: #efa495;
+  color: #000000; }
+  .step.hex-efa495 .step__icon g,
+  .step.hex-efa495 .step__icon rect,
+  .step.hex-efa495 .step__icon path,
+  .step.hex-efa495 .step__icon circle,
+  .step.hex-efa495 .itinerary__map--icon-nested g,
+  .step.hex-efa495 .itinerary__map--icon-nested rect,
+  .step.hex-efa495 .itinerary__map--icon-nested path,
+  .step.hex-efa495 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-efa495 .step__icon g,
+  .itinerary__map--icon.hex-efa495 .step__icon rect,
+  .itinerary__map--icon.hex-efa495 .step__icon path,
+  .itinerary__map--icon.hex-efa495 .step__icon circle,
+  .itinerary__map--icon.hex-efa495 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-efa495 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-efa495 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-efa495 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-efa495 .step__route--icons g,
+.step.hex-efa495 .step__route--icons rect,
+.step.hex-efa495 .step__route--icons path,
+.step.hex-efa495 .step__route--icons circle,
+.itinerary__map--icon.hex-efa495 .step__route--icons g,
+.itinerary__map--icon.hex-efa495 .step__route--icons rect,
+.itinerary__map--icon.hex-efa495 .step__route--icons path,
+.itinerary__map--icon.hex-efa495 .step__route--icons circle {
+  fill: #efa495; }
+
+.step.hex-efa495 .step__route--icons span,
+.itinerary__map--icon.hex-efa495 .step__route--icons span {
+  background-color: #efa495; }
+
+.step.hex-fa6400 .step__icon,
+.step.hex-fa6400 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-fa6400 .step__icon,
+.itinerary__map--icon.hex-fa6400 .itinerary__map--icon-nested {
+  background-color: #fa6400;
+  color: #ffffff; }
+  .step.hex-fa6400 .step__icon g,
+  .step.hex-fa6400 .step__icon rect,
+  .step.hex-fa6400 .step__icon path,
+  .step.hex-fa6400 .step__icon circle,
+  .step.hex-fa6400 .itinerary__map--icon-nested g,
+  .step.hex-fa6400 .itinerary__map--icon-nested rect,
+  .step.hex-fa6400 .itinerary__map--icon-nested path,
+  .step.hex-fa6400 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-fa6400 .step__icon g,
+  .itinerary__map--icon.hex-fa6400 .step__icon rect,
+  .itinerary__map--icon.hex-fa6400 .step__icon path,
+  .itinerary__map--icon.hex-fa6400 .step__icon circle,
+  .itinerary__map--icon.hex-fa6400 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-fa6400 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-fa6400 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-fa6400 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-fa6400 .step__route--icons g,
+.step.hex-fa6400 .step__route--icons rect,
+.step.hex-fa6400 .step__route--icons path,
+.step.hex-fa6400 .step__route--icons circle,
+.itinerary__map--icon.hex-fa6400 .step__route--icons g,
+.itinerary__map--icon.hex-fa6400 .step__route--icons rect,
+.itinerary__map--icon.hex-fa6400 .step__route--icons path,
+.itinerary__map--icon.hex-fa6400 .step__route--icons circle {
+  fill: #fa6400; }
+
+.step.hex-fa6400 .step__route--icons span,
+.itinerary__map--icon.hex-fa6400 .step__route--icons span {
+  background-color: #fa6400; }
+
+.step.hex-d9d9d9 .step__icon,
+.step.hex-d9d9d9 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-d9d9d9 .step__icon,
+.itinerary__map--icon.hex-d9d9d9 .itinerary__map--icon-nested {
+  background-color: #d9d9d9;
+  color: #000000; }
+  .step.hex-d9d9d9 .step__icon g,
+  .step.hex-d9d9d9 .step__icon rect,
+  .step.hex-d9d9d9 .step__icon path,
+  .step.hex-d9d9d9 .step__icon circle,
+  .step.hex-d9d9d9 .itinerary__map--icon-nested g,
+  .step.hex-d9d9d9 .itinerary__map--icon-nested rect,
+  .step.hex-d9d9d9 .itinerary__map--icon-nested path,
+  .step.hex-d9d9d9 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-d9d9d9 .step__icon g,
+  .itinerary__map--icon.hex-d9d9d9 .step__icon rect,
+  .itinerary__map--icon.hex-d9d9d9 .step__icon path,
+  .itinerary__map--icon.hex-d9d9d9 .step__icon circle,
+  .itinerary__map--icon.hex-d9d9d9 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-d9d9d9 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-d9d9d9 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-d9d9d9 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-d9d9d9 .step__route--icons g,
+.step.hex-d9d9d9 .step__route--icons rect,
+.step.hex-d9d9d9 .step__route--icons path,
+.step.hex-d9d9d9 .step__route--icons circle,
+.itinerary__map--icon.hex-d9d9d9 .step__route--icons g,
+.itinerary__map--icon.hex-d9d9d9 .step__route--icons rect,
+.itinerary__map--icon.hex-d9d9d9 .step__route--icons path,
+.itinerary__map--icon.hex-d9d9d9 .step__route--icons circle {
+  fill: #d9d9d9; }
+
+.step.hex-d9d9d9 .step__route--icons span,
+.itinerary__map--icon.hex-d9d9d9 .step__route--icons span {
+  background-color: #d9d9d9; }
+
+.step.hex-2ebdb6 .step__icon,
+.step.hex-2ebdb6 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-2ebdb6 .step__icon,
+.itinerary__map--icon.hex-2ebdb6 .itinerary__map--icon-nested {
+  background-color: #2ebdb6;
+  color: #000000; }
+  .step.hex-2ebdb6 .step__icon g,
+  .step.hex-2ebdb6 .step__icon rect,
+  .step.hex-2ebdb6 .step__icon path,
+  .step.hex-2ebdb6 .step__icon circle,
+  .step.hex-2ebdb6 .itinerary__map--icon-nested g,
+  .step.hex-2ebdb6 .itinerary__map--icon-nested rect,
+  .step.hex-2ebdb6 .itinerary__map--icon-nested path,
+  .step.hex-2ebdb6 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-2ebdb6 .step__icon g,
+  .itinerary__map--icon.hex-2ebdb6 .step__icon rect,
+  .itinerary__map--icon.hex-2ebdb6 .step__icon path,
+  .itinerary__map--icon.hex-2ebdb6 .step__icon circle,
+  .itinerary__map--icon.hex-2ebdb6 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-2ebdb6 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-2ebdb6 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-2ebdb6 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-2ebdb6 .step__route--icons g,
+.step.hex-2ebdb6 .step__route--icons rect,
+.step.hex-2ebdb6 .step__route--icons path,
+.step.hex-2ebdb6 .step__route--icons circle,
+.itinerary__map--icon.hex-2ebdb6 .step__route--icons g,
+.itinerary__map--icon.hex-2ebdb6 .step__route--icons rect,
+.itinerary__map--icon.hex-2ebdb6 .step__route--icons path,
+.itinerary__map--icon.hex-2ebdb6 .step__route--icons circle {
+  fill: #2ebdb6; }
+
+.step.hex-2ebdb6 .step__route--icons span,
+.itinerary__map--icon.hex-2ebdb6 .step__route--icons span {
+  background-color: #2ebdb6; }
+
+.step.hex-e6b378 .step__icon,
+.step.hex-e6b378 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-e6b378 .step__icon,
+.itinerary__map--icon.hex-e6b378 .itinerary__map--icon-nested {
+  background-color: #e6b378;
+  color: #000000; }
+  .step.hex-e6b378 .step__icon g,
+  .step.hex-e6b378 .step__icon rect,
+  .step.hex-e6b378 .step__icon path,
+  .step.hex-e6b378 .step__icon circle,
+  .step.hex-e6b378 .itinerary__map--icon-nested g,
+  .step.hex-e6b378 .itinerary__map--icon-nested rect,
+  .step.hex-e6b378 .itinerary__map--icon-nested path,
+  .step.hex-e6b378 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-e6b378 .step__icon g,
+  .itinerary__map--icon.hex-e6b378 .step__icon rect,
+  .itinerary__map--icon.hex-e6b378 .step__icon path,
+  .itinerary__map--icon.hex-e6b378 .step__icon circle,
+  .itinerary__map--icon.hex-e6b378 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-e6b378 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-e6b378 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-e6b378 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-e6b378 .step__route--icons g,
+.step.hex-e6b378 .step__route--icons rect,
+.step.hex-e6b378 .step__route--icons path,
+.step.hex-e6b378 .step__route--icons circle,
+.itinerary__map--icon.hex-e6b378 .step__route--icons g,
+.itinerary__map--icon.hex-e6b378 .step__route--icons rect,
+.itinerary__map--icon.hex-e6b378 .step__route--icons path,
+.itinerary__map--icon.hex-e6b378 .step__route--icons circle {
+  fill: #e6b378; }
+
+.step.hex-e6b378 .step__route--icons span,
+.itinerary__map--icon.hex-e6b378 .step__route--icons span {
+  background-color: #e6b378; }
+
+.step.hex-4244ff .step__icon,
+.step.hex-4244ff .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-4244ff .step__icon,
+.itinerary__map--icon.hex-4244ff .itinerary__map--icon-nested {
+  background-color: #4244ff;
+  color: #ffffff; }
+  .step.hex-4244ff .step__icon g,
+  .step.hex-4244ff .step__icon rect,
+  .step.hex-4244ff .step__icon path,
+  .step.hex-4244ff .step__icon circle,
+  .step.hex-4244ff .itinerary__map--icon-nested g,
+  .step.hex-4244ff .itinerary__map--icon-nested rect,
+  .step.hex-4244ff .itinerary__map--icon-nested path,
+  .step.hex-4244ff .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-4244ff .step__icon g,
+  .itinerary__map--icon.hex-4244ff .step__icon rect,
+  .itinerary__map--icon.hex-4244ff .step__icon path,
+  .itinerary__map--icon.hex-4244ff .step__icon circle,
+  .itinerary__map--icon.hex-4244ff .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-4244ff .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-4244ff .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-4244ff .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-4244ff .step__route--icons g,
+.step.hex-4244ff .step__route--icons rect,
+.step.hex-4244ff .step__route--icons path,
+.step.hex-4244ff .step__route--icons circle,
+.itinerary__map--icon.hex-4244ff .step__route--icons g,
+.itinerary__map--icon.hex-4244ff .step__route--icons rect,
+.itinerary__map--icon.hex-4244ff .step__route--icons path,
+.itinerary__map--icon.hex-4244ff .step__route--icons circle {
+  fill: #4244ff; }
+
+.step.hex-4244ff .step__route--icons span,
+.itinerary__map--icon.hex-4244ff .step__route--icons span {
+  background-color: #4244ff; }
+
+.step.hex-008672 .step__icon,
+.step.hex-008672 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-008672 .step__icon,
+.itinerary__map--icon.hex-008672 .itinerary__map--icon-nested {
+  background-color: #008672;
+  color: #000000; }
+  .step.hex-008672 .step__icon g,
+  .step.hex-008672 .step__icon rect,
+  .step.hex-008672 .step__icon path,
+  .step.hex-008672 .step__icon circle,
+  .step.hex-008672 .itinerary__map--icon-nested g,
+  .step.hex-008672 .itinerary__map--icon-nested rect,
+  .step.hex-008672 .itinerary__map--icon-nested path,
+  .step.hex-008672 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-008672 .step__icon g,
+  .itinerary__map--icon.hex-008672 .step__icon rect,
+  .itinerary__map--icon.hex-008672 .step__icon path,
+  .itinerary__map--icon.hex-008672 .step__icon circle,
+  .itinerary__map--icon.hex-008672 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-008672 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-008672 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-008672 .itinerary__map--icon-nested circle {
+    fill: #000000; }
+
+.step.hex-008672 .step__route--icons g,
+.step.hex-008672 .step__route--icons rect,
+.step.hex-008672 .step__route--icons path,
+.step.hex-008672 .step__route--icons circle,
+.itinerary__map--icon.hex-008672 .step__route--icons g,
+.itinerary__map--icon.hex-008672 .step__route--icons rect,
+.itinerary__map--icon.hex-008672 .step__route--icons path,
+.itinerary__map--icon.hex-008672 .step__route--icons circle {
+  fill: #008672; }
+
+.step.hex-008672 .step__route--icons span,
+.itinerary__map--icon.hex-008672 .step__route--icons span {
+  background-color: #008672; }
+
+.step.hex-b030da .step__icon,
+.step.hex-b030da .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-b030da .step__icon,
+.itinerary__map--icon.hex-b030da .itinerary__map--icon-nested {
+  background-color: #b030da;
+  color: #ffffff; }
+  .step.hex-b030da .step__icon g,
+  .step.hex-b030da .step__icon rect,
+  .step.hex-b030da .step__icon path,
+  .step.hex-b030da .step__icon circle,
+  .step.hex-b030da .itinerary__map--icon-nested g,
+  .step.hex-b030da .itinerary__map--icon-nested rect,
+  .step.hex-b030da .itinerary__map--icon-nested path,
+  .step.hex-b030da .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-b030da .step__icon g,
+  .itinerary__map--icon.hex-b030da .step__icon rect,
+  .itinerary__map--icon.hex-b030da .step__icon path,
+  .itinerary__map--icon.hex-b030da .step__icon circle,
+  .itinerary__map--icon.hex-b030da .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-b030da .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-b030da .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-b030da .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-b030da .step__route--icons g,
+.step.hex-b030da .step__route--icons rect,
+.step.hex-b030da .step__route--icons path,
+.step.hex-b030da .step__route--icons circle,
+.itinerary__map--icon.hex-b030da .step__route--icons g,
+.itinerary__map--icon.hex-b030da .step__route--icons rect,
+.itinerary__map--icon.hex-b030da .step__route--icons path,
+.itinerary__map--icon.hex-b030da .step__route--icons circle {
+  fill: #b030da; }
+
+.step.hex-b030da .step__route--icons span,
+.itinerary__map--icon.hex-b030da .step__route--icons span {
+  background-color: #b030da; }
+
+.step.hex-804949 .step__icon,
+.step.hex-804949 .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-804949 .step__icon,
+.itinerary__map--icon.hex-804949 .itinerary__map--icon-nested {
+  background-color: #804949;
+  color: #ffffff; }
+  .step.hex-804949 .step__icon g,
+  .step.hex-804949 .step__icon rect,
+  .step.hex-804949 .step__icon path,
+  .step.hex-804949 .step__icon circle,
+  .step.hex-804949 .itinerary__map--icon-nested g,
+  .step.hex-804949 .itinerary__map--icon-nested rect,
+  .step.hex-804949 .itinerary__map--icon-nested path,
+  .step.hex-804949 .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-804949 .step__icon g,
+  .itinerary__map--icon.hex-804949 .step__icon rect,
+  .itinerary__map--icon.hex-804949 .step__icon path,
+  .itinerary__map--icon.hex-804949 .step__icon circle,
+  .itinerary__map--icon.hex-804949 .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-804949 .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-804949 .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-804949 .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-804949 .step__route--icons g,
+.step.hex-804949 .step__route--icons rect,
+.step.hex-804949 .step__route--icons path,
+.step.hex-804949 .step__route--icons circle,
+.itinerary__map--icon.hex-804949 .step__route--icons g,
+.itinerary__map--icon.hex-804949 .step__route--icons rect,
+.itinerary__map--icon.hex-804949 .step__route--icons path,
+.itinerary__map--icon.hex-804949 .step__route--icons circle {
+  fill: #804949; }
+
+.step.hex-804949 .step__route--icons span,
+.itinerary__map--icon.hex-804949 .step__route--icons span {
+  background-color: #804949; }
+
+.step.hex-00498e .step__icon,
+.step.hex-00498e .itinerary__map--icon-nested,
+.itinerary__map--icon.hex-00498e .step__icon,
+.itinerary__map--icon.hex-00498e .itinerary__map--icon-nested {
+  background-color: #00498e;
+  color: #ffffff; }
+  .step.hex-00498e .step__icon g,
+  .step.hex-00498e .step__icon rect,
+  .step.hex-00498e .step__icon path,
+  .step.hex-00498e .step__icon circle,
+  .step.hex-00498e .itinerary__map--icon-nested g,
+  .step.hex-00498e .itinerary__map--icon-nested rect,
+  .step.hex-00498e .itinerary__map--icon-nested path,
+  .step.hex-00498e .itinerary__map--icon-nested circle,
+  .itinerary__map--icon.hex-00498e .step__icon g,
+  .itinerary__map--icon.hex-00498e .step__icon rect,
+  .itinerary__map--icon.hex-00498e .step__icon path,
+  .itinerary__map--icon.hex-00498e .step__icon circle,
+  .itinerary__map--icon.hex-00498e .itinerary__map--icon-nested g,
+  .itinerary__map--icon.hex-00498e .itinerary__map--icon-nested rect,
+  .itinerary__map--icon.hex-00498e .itinerary__map--icon-nested path,
+  .itinerary__map--icon.hex-00498e .itinerary__map--icon-nested circle {
+    fill: #ffffff; }
+
+.step.hex-00498e .step__route--icons g,
+.step.hex-00498e .step__route--icons rect,
+.step.hex-00498e .step__route--icons path,
+.step.hex-00498e .step__route--icons circle,
+.itinerary__map--icon.hex-00498e .step__route--icons g,
+.itinerary__map--icon.hex-00498e .step__route--icons rect,
+.itinerary__map--icon.hex-00498e .step__route--icons path,
+.itinerary__map--icon.hex-00498e .step__route--icons circle {
+  fill: #00498e; }
+
+.step.hex-00498e .step__route--icons span,
+.itinerary__map--icon.hex-00498e .step__route--icons span {
+  background-color: #00498e; }
+
+.text--green .text__legend,
+.text--green .text__card-header {
+  background-color: #cbeddf; }
+
+.text--yellow .text__legend,
+.text--yellow .text__card-header {
+  background-color: #eaf39c; }
+
+.text__legend {
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.16);
+  border: none; }
+
+.text__heading {
+  color: #034638;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .text__heading {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 0; }
+      .text__heading:hover {
+        cursor: pointer; }
+      .text__heading .text__close {
+        display: none;
+        width: 16px;
+        height: 16px;
+        background-image: url(../img/icon-close.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50% 50%; }
+      .text__heading.close .text__close {
+        display: block !important; } }
+
+.text__close {
+  display: none; }
+
+.text__copy {
+  color: #5c5c5c; }
+  .text__copy a.custom {
+    text-decoration: none;
+    display: inline-block;
+    color: #034638;
+    text-decoration: none;
+    font-weight: 700; }
+
+.text__menu {
+  width: 24px;
+  height: 16px;
+  margin-right: 8px;
+  background-image: url(../img/icon-sticky.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  display: none; }
+  @media screen and (max-width: 768px) {
+    .text__menu {
+      display: block; } }
+
+.text__list {
+  background-color: #ffffff;
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+  display: grid !important;
+  grid-template-columns: 1fr;
+  text-align: left; }
+  @media screen and (max-width: 768px) {
+    .text__list {
+      display: none !important; } }
+
+.text__list-item {
+  color: #034638;
+  height: 100%;
+  border-bottom: 1px solid #d9d9d9; }
+  .text__list-item:last-of-type {
+    border-bottom: none; }
+
+.text__list-link {
+  color: #034638;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 16px;
+  transition: all ease 0.2s;
+  margin: 0;
+  text-decoration: none; }
+  .text__list-link span {
+    text-decoration: underline; }
+  .text__list-link:hover {
+    background-color: #f1f4f5;
+    text-decoration: none; }
+  .text__list-link:before {
+    content: '';
+    background-color: #034638;
+    display: inline-block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-decoration: none !important; }
+
+.text--sticky {
+  position: sticky;
+  top: 5px;
+  align-self: start; }
+  @media screen and (max-width: 768px) {
+    .text--sticky {
+      position: fixed;
+      bottom: 20px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 88%;
+      border-radius: 20px;
+      padding: 10px 20px; }
+      .text--sticky.expand {
+        left: 0%;
+        transform: translateX(0%);
+        width: 100%;
+        border-radius: 8px;
+        padding: 24px 16px 16px 16px;
+        bottom: 0px;
+        scroll-behavior: smooth;
+        overflow: scroll; } }
+
+.text__content {
+  display: grid;
+  grid-gap: 45px; }
+
+.text__section {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 24px; }
+
+.text__section-heading {
+  color: #034638;
+  margin-bottom: 10px;
+  font-weight: 800;
+  margin-top: 10px; }
+
+.text__card {
+  border-radius: 8px;
+  overflow: hidden; }
+  .text__card-header {
+    padding: 16px 24px;
+    margin: 0;
+    font-weight: 700; }
+  .text__card-content {
+    padding: 0px 24px 0 24px;
+    border: 1px solid #d9d9d9;
+    border-top: none;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    overflow: hidden; }
+    @media screen and (max-width: 768px) {
+      .text__card-content {
+        padding: 0 16px; } }
+    .text__card-content * {
+      color: #5c5c5c; }
+  .text__card p {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px; }
+    .text__card p:last-child {
+      margin-top: 16px; }
+    .text__card p em {
+      font-style: normal;
+      font-weight: bold;
+      margin-bottom: -10px;
+      display: inherit; }
+  .text__card ul,
+  .text__card ol {
+    padding-left: 8px;
+    margin-top: 0;
+    margin-bottom: 16px; }
+    .text__card ul:last-child,
+    .text__card ol:last-child {
+      margin-bottom: 0; }
+    .text__card ul:first-of-type:last-of-type,
+    .text__card ol:first-of-type:last-of-type {
+      margin-bottom: 16px; }
+    .text__card ul li,
+    .text__card ol li {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      margin-bottom: 16px; }
+      .text__card ul li:last-of-type,
+      .text__card ol li:last-of-type {
+        margin-bottom: 0; }
+      .text__card ul li p,
+      .text__card ol li p {
+        margin: 0 !important; }
+  .text__card ul {
+    list-style-position: inside;
+    list-style-type: none; }
+    .text__card ul li:before {
+      content: '•';
+      display: inline-block;
+      border-radius: 50%;
+      margin-right: 10px; }
+  .text__card ol {
+    list-style-position: inside;
+    list-style-type: decimal;
+    counter-reset: counter; }
+    .text__card ol li {
+      list-style-type: decimal;
+      counter-increment: counter; }
+      .text__card ol li:before {
+        content: counter(counter) ".";
+        margin-right: 10px; }
+  .text__card a {
+    display: inline;
+    color: #034638;
+    text-decoration: underline;
+    font-weight: 700; }
+    .text__card a.small {
+      font-size: 14px;
+      margin-bottom: 16px;
+      line-height: 24px; }
+
+.text__info {
+  margin: 16px 0; }
+  .text__info * {
+    font-size: 16px;
+    color: #000000; }
+  .text__info p {
+    margin: 0;
+    line-height: 24px; }
+    .text__info p:first-of-type {
+      margin-bottom: 16px; }
+    .text__info p:first-of-type:last-of-type {
+      margin-bottom: 0;
+      margin-top: 0; }
+    .text__info p b {
+      font-weight: 700;
+      display: inline-block; }
+  .text__info ol,
+  .text__info ul {
+    margin-top: 16px; }
+
+.text__steps {
+  list-style: none;
+  margin: 0;
+  padding-left: 0px;
+  counter-reset: custom-counter;
+  display: grid;
+  grid-gap: 16px; }
+  .text__steps-item {
+    counter-increment: custom-counter;
+    padding-left: 8px;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    padding: 16px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    align-items: center;
+    grid-gap: 16px; }
+    .text__steps-item p {
+      margin-bottom: 0; }
+    .text__steps-item:last-of-type p {
+      margin-bottom: 0; }
+      @media screen and (max-width: 768px) {
+        .text__steps-item:last-of-type p {
+          margin-bottom: 1em; } }
+    .text__steps-item::before {
+      content: counter(custom-counter);
+      font-size: 24px;
+      --size: 40px;
+      left: calc(-1 * var(--size) - 20px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: calc(-1 * (calc(var(--size) / 2.5)));
+      border-radius: 50%;
+      text-align: center;
+      background-color: #97dbc0;
+      color: #034638;
+      font-weight: 700;
+      padding: 5px; }
+  .text__steps-link {
+    color: #000000; }
+
+.text__list--custom {
+  list-style: none;
+  margin: 0;
+  margin-bottom: 22px;
+  padding-left: 0px;
+  display: grid;
+  grid-gap: 25px;
+  display: block !important; }
+  .text__list--custom * {
+    color: #5c5c5c; }
+  .text__list--custom li {
+    padding-left: 8px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-content: center;
+    align-items: center;
+    grid-gap: 16px;
+    margin-bottom: 24px; }
+    .text__list--custom li p {
+      margin-bottom: 0;
+      margin-top: 0;
+      font-size: 16px;
+      line-height: 24px;
+      margin: 0; }
+    .text__list--custom li:last-of-type p {
+      margin-bottom: 0; }
+      @media screen and (max-width: 768px) {
+        .text__list--custom li:last-of-type p {
+          margin-bottom: 1em; } }
+    .text__list--custom li::before {
+      content: '';
+      background-image: url(../img/icon-star.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 65%;
+      font-size: 24px;
+      --size: 30px;
+      left: calc(-1 * var(--size) - 20px);
+      line-height: var(--size);
+      width: var(--size);
+      height: var(--size);
+      top: calc(-1 * (calc(var(--size) / 2.5)));
+      border-radius: 50%;
+      text-align: center;
+      background-color: #eaf39c;
+      color: #034638;
+      font-weight: 700;
+      padding: 5px;
+      align-self: start; }
+
+.text__list--custom2 li::before {
+  content: '';
+  background-size: 55%; }
+
+.text__list--custom2 li:nth-of-type(1)::before {
+  background-image: url(../img/icon-cal-green.png);
+  background-size: 50%; }
+
+.text__list--custom2 li:nth-of-type(2)::before {
+  background-image: url(../img/icon-loc-green.png);
+  background-size: 50%; }
+
+.text__list--custom2 li:nth-of-type(3)::before {
+  background-image: url(../img/icon-card-green.png); }
+
+.text__shuttle-num {
+  padding: 12px 6px;
+  padding-top: 13px;
+  display: inline-block;
+  border-radius: 4px;
+  line-height: 0px;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #5c5c5c;
+  font-size: 14px; }
+
+.text__table {
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 16px 0; }
+  .text__table-header {
+    font-weight: 700;
+    padding: 0 0 6px 0; }
+  .text__table-content {
+    padding: 16px 0; }
+  .text__table b {
+    font-size: 16px;
+    color: #000000;
+    margin: 16px 0;
+    font-weight: 700; }
+
+.text__table--1 .text__table-header,
+.text__table--1 .text__table-content {
+  display: grid;
+  grid-template-columns: 58px 1fr 1fr;
+  grid-gap: 10px;
+  border-bottom: 1px solid #d9d9d9; }
+
+@media screen and (max-width: 768px) {
+  .text__table--1 .text__table-header {
+    display: none; } }
+
+@media screen and (max-width: 768px) {
+  .text__table--1 .text__table-content {
+    grid-template-columns: 50px 1fr; }
+    .text__table--1 .text__table-content span:nth-of-type(1) {
+      grid-column: 1 / 2; }
+    .text__table--1 .text__table-content span:nth-of-type(2) {
+      grid-column: 2 / -1;
+      grid-row: 2 / 3;
+      align-self: center; }
+    .text__table--1 .text__table-content span:nth-of-type(3) {
+      grid-column: 1 / -1; } }
+
+.text__table--1 .text__table-content span:nth-of-type(1) {
+  margin-top: 4px;
+  padding: 12px 5px;
+  display: block;
+  border-radius: 4px;
+  line-height: 0;
+  align-self: start;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #5c5c5c;
+  font-size: 14px;
+  width: 34px; }
+
+.text__table--1 .text__table-content p {
+  display: none;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: -10px; }
+  @media screen and (max-width: 768px) {
+    .text__table--1 .text__table-content p {
+      display: block;
+      grid-column: 1 / -1; } }
+
+.text__table--2 .text__table-header,
+.text__table--2 .text__table-content {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  grid-gap: 10px;
+  border-bottom: 1px solid #d9d9d9; }
+
+.text__table--2 .text__table-content span:first-of-type {
+  font-weight: 700; }
+
+.text__table--2 .text__table-content span:not(:nth-of-type(1)) {
+  grid-column: 2 / -1;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 15px;
+  margin-left: 10px; }
+  .text__table--2 .text__table-content span:not(:nth-of-type(1)):before {
+    content: '•';
+    display: inline-block; }
+
+.text__table--3 .text__table-header,
+.text__table--3 .text__table-content {
+  display: grid;
+  grid-template-columns: 1fr 120px 140px;
+  grid-gap: 10px;
+  grid-column-gap: 20px;
+  border-bottom: 1px solid #d9d9d9; }
+  @media screen and (max-width: 768px) {
+    .text__table--3 .text__table-header,
+    .text__table--3 .text__table-content {
+      grid-template-columns: 1fr 60px 80px; } }
+
+.text__table--3 .text__table-content span:not(:nth-of-type(1)) {
+  grid-column: 2 / 3; }
+
+.text__table--3 .text__table-content span:nth-of-type(3) {
+  grid-column: 3 / -1; }
+
+</style>
+
+
+<!-- Copy starts here -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>

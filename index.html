@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    Exo - Mesure tarifaire - Mascouche      </title>
+
+    <meta content="Exo" name="application-name" />
+  <meta content="#FFFFFF" name="msapplication-TileColor" />
+  <meta content="https://exo.quebec/Media/Default/favicon/mstile-144x144.png" name="msapplication-TileImage" />
+  <meta content="https://exo.quebec/Media/Default/favicon/mstile-70x70.png" name="msapplication-square70x70logo" />
+  <meta content="https://exo.quebec/Media/Default/favicon/mstile-150x150.png" name="msapplication-square150x150logo" />
+  <meta content="https://exo.quebec/Media/Default/favicon/mstile-310x150.png" name="msapplication-wide310x150logo" />
+  <meta content="https://exo.quebec/Media/Default/favicon/mstile-310x310.png" name="msapplication-square310x310logo" />
+  <meta content="https://exo.quebec/Media/Default/images/exo-noir-300x300.png" name="og:image" />
+  <meta content="Exo" name="og:title" />
+  <meta content="Exo - Autobus, trains et transport adapté dans la région du grand Montréal" name="og:description" />
+  <link href="https://exo.quebec/Media/Default/favicon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://exo.quebec/Media/Default/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="https://exo.quebec/Media/Default/favicon/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="https://exo.quebec/Media/Default/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="https://exo.quebec/Media/Default/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="https://exo.quebec/Media/Default/favicon/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="https://exo.quebec/Media/Default/favicon/favicon-128.png" sizes="128x128" />
+
+    <script type='text/javascript'>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-16086161-1', 'exo.quebec', {'allowLinker': true});
+
+    ga('send', 'pageview');
+
+    setTimeout(function() {
+      ga('send', 'event', 'bounce-rate', 'read', '20-seconds');
+    }, 20000);
+
+    if (document.referrer.match(/google\.([a-zA-Z]{2,6})/gi) && document.referrer.match(/cd/gi)) {
+      var myString = document.referrer;
+      var r        = myString.match(/cd=(.*?)&/);
+      var rank     = parseInt(r[1]);
+      var kw       = myString.match(/q=(.*?)&/);
+
+      if (kw[1].length > 0) {
+          var keyWord  = decodeURI(kw[1]);
+      } else {
+          keyWord = '(not provided)';
+      }
+
+      var p        = document.location.pathname;
+      ga('send', 'event', 'RankTracker', keyWord, p, rank, true);
+    }
+  </script>
+
+  <link rel="stylesheet" href="../css/main.css">
+
+  <script>
+    var GLOBAL_site_root = "../";
+    var GLOBAL_site_path = "/fr/";
+    var GLOBAL_site_lang = "fr";
+    var GLOBAL_is_sector = false;
+  </script>
+</head>
+<body>
+
+<div class="content__ann">
+  <!-- <span class="content__ann--icon"></span> -->
+  <div class="content__ann-wrapper">
+    <p>Ligne Deux-Montagnes fermée depuis le 1<sup>er</sup> janvier 2021. Consultez vos <a href="https://exo.quebec/Media/Default/html/REM/fr/sectors.html">options de transport</a>.</p>
+  </div>
+</div>
+
+<nav class="nav nav__header">
+  <div class="nav__wrapper">
+    <a href="index.html" class="nav__link logo" >
+      <img src="../img/logo-exo.svg" alt="">
+      <div class="nav__logo">
+        <span>Info</span>
+        <span>Mobilité REM</span>
+      </div>
+    </a>
+    <button class="nav__menu js-trigger-menu" aria-haspopup="true" aria-label="Menu" aria-controls="dropdown-menu"></button>
+    <div class="nav__list-wrapper js-dropdown-menu" id="dropdown-menu">
+      <ul class="nav__list">
+        <li class="nav__item" role="none">
+          <a tabindex="0" href="sectors.html" role="menuitem" class="nav__link ">Options de transport</a>
+        </li>
+        <li class="nav__item nav__item--dropdown js-submenu" role="none">
+          <button tabindex="0" aria-haspopup="true" aria-controls="submenu" id="dropdown-button" class="nav__link active">Mesures tarifaires</button>
+          <ul class="nav__dropdown" id="submenu" role="menu" aria-labelledby="dropdown-button">
+            <li class="nav__dropdown-item" role="none"><a tabindex="0" class="nav__dropdown-link copy-4" role="menuitem" href="fares-exo5.html" class="nav__link">Ligne Mascouche</a></li>
+            <li class="nav__dropdown-item" role="none"><a tabindex="0" class="nav__dropdown-link copy-4" role="menuitem" href="fares-exo6.html" class="nav__link">Ligne Deux-Montagnes</a></li>
+          </ul>
+        </li>
+        <li class="nav__item" role="none">
+          <a tabindex="0" href="faq.html" role="menuitem" class="nav__link ">FAQ</a>
+        </li>
+        <li class="nav__item" role="none">
+          <a tabindex="0" href="contact.html" role="menuitem" class="nav__link ">Contactez-nous</a>
+        </li>
+        <li class="nav__item" role="none">
+          <a tabindex="0" href="../en/fares-exo5.html" role="menuitem" class="nav__link lang">EN</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="main">
+  <div class="content">
+
+    <div class="breadcrumbs">
+      <p class="breadcrumbs__item copy-4">Accueil</p>
+      <p class="breadcrumbs__item copy-4">Mesure tarifaire - Mascouche</p>
+    </div>
+
+        <div class="content__header">
+            <h1 class="heading-1">Mesure tarifaire pour la ligne Mascouche</h1>
+      <p class="copy-1">Obtenez toute l'information pour bénéficier de la mesure tarifaire offerte par l'Autorité régionale de transport métropolitain (ARTM) et les partenaires de Mobilité Montréal pour la clientèle de la ligne exo5 Mascouche.</p>
+    </div>
+
+
+    <div class="content__cards">
+
+            <div class="card card--text">
+  <h2 class="heading-2">La mesure tarifaire en bref</h2>
+  <ul class="text__list text__list--custom">
+        <li>
+      <p>Réduction tarifaire <b>pouvant aller jusqu'à 30%</b>, applicable sur l'achat d'un titre mensuel TRAIN ou TRAM ou Tous modes ABC.</p>
+    </li>
+        <li>
+      <p><b>Période d'inscription terminée</b>: la période d'inscription à la mesure tarifaire Mascouche est terminée depuis le 31 octobre 2020.</p>
+    </li>
+      </ul>
+  <p class="text__copy copy-3">Certaines conditions s'appliquent. <a href="https://exo.quebec/Media/Default/pdf/section5/Offres/Modalites-REM-2A-MA.pdf" target="_blank" class="custom">Voir les modalités</a>.</a></p>
+</div>
+
+      <div class="card card--6cl card--no-padding text text--yellow">
+
+                <button
+  class="text__legend text--sticky js-dropdown-mobile"
+  aria-haspopup="true"
+  aria-label="Legend"
+  aria-controls="legend-menu">
+  <h3 class="text__heading copy-2 js-trigger-sticky">
+    <span class="text__menu"></span>
+    Les sections sur cette page    <span class="text__close"></span>
+  </h3>
+
+  <ul
+    class="text__list js-dropdown-sticky"
+    id="legend-menu"
+    role="alertdialog"
+    aria-modal="true"
+    aria-labelledby="modal_label"
+    aria-describedby="modal_desc"
+    tabindex="-1">
+        <li class="text__list-item" role="none">
+      <a class="text__list-link sub-heading js-dropdown-link" role="menuitem" href="fares-exo5.html#section-0"><span>Conditions d'admissibilité</span></a>
+    </li>
+        <li class="text__list-item" role="none">
+      <a class="text__list-link sub-heading js-dropdown-link" role="menuitem" href="fares-exo5.html#section-1"><span>Choisir un titre</span></a>
+    </li>
+        <li class="text__list-item" role="none">
+      <a class="text__list-link sub-heading js-dropdown-link" role="menuitem" href="fares-exo5.html#section-2"><span>OPUS+ ou OPUS+ entreprise</span></a>
+    </li>
+        <li class="text__list-item" role="none">
+      <a class="text__list-link sub-heading js-dropdown-link" role="menuitem" href="fares-exo5.html#section-3"><span>Annuler son abonnement</span></a>
+    </li>
+      </ul>
+</button>
+
+                <div class="text__content">
+    <div id="section-0" class="text__section">
+    <h2 class="text__section-heading copy-1">Conditions d'admissibilité</h2>
+
+
+
+
+                        <div class="text__card">
+            <div id="question-0-1" class="text__card-header">Quelles sont les conditions d'admissibilité?</div>
+            <div class="text__card-content">
+
+
+
+
+
+
+                    <br>
+                    <ul>
+                      <li><p><b>Résider dans le bassin géographique identifié</b> par l'Autorité régionale de transport métropolitain (ARTM).</p></li>
+                      <li><p><b>Vous être inscrit à la mesure tarifaire au plus tard le 31 octobre 2020.</b></p></li>
+                      <li><p><b>Avoir fait une seule inscription par personne.</b></p></li>
+                      <li><p><b>Ne pas avoir dépassé cinq demandes par adresse postale.</b></p></li>
+                    </ul>
+                    <p><a href="https://exo.quebec/Media/Default/pdf/section5/Offres/Modalites-REM-2A-MA.pdf" target="_blank">Voir les modalités</a><p>
+
+                                      <div class="card text__info card__info card--blue-light">
+                      <span class="info__icon info__icon--1"></span>
+                      <div>
+
+                    <p><b>Votre demande en ligne a été refusée?</b></p>
+                    <p>Vous devriez avoir reçu un courriel qui mentionnera la raison de l'inadmissibilité de votre demande. </p>                      </div>
+                    </div>
+
+
+
+
+
+                                          </div>
+          </div>
+
+      </div>
+    <div id="section-1" class="text__section">
+    <h2 class="text__section-heading copy-1">Choisir un titre</h2>
+
+
+
+
+                        <div class="text__card">
+            <div id="question-1-1" class="text__card-header">Quel titre devrais-je choisir?</div>
+            <div class="text__card-content">
+
+
+
+
+
+
+                    <p><b>Vous n'utiliserez que le train</b></p>
+                    <ul>
+                      <li><p>Vous devez avoir en main un titre TRAIN de la zone de votre départ.</p></li>
+                    </ul>
+                    <p><b>Vous utiliserez le train, le métro ou des navettes et le métro</b></p>
+                    <ul>
+                      <li><p>Vous devez avoir en main un titre TRAM ou Tous modes de la zone de votre départ.</p></li>
+                    </ul>
+                    <p><b>Pour les navettes 500, 501 et 502</b></p>
+
+
+                                      <div class="text__table text__table--1">
+                      <div class="text__table-header">
+                                                  <span>Navette</span>
+                                                  <span>Itinéraire</span>
+                                                  <span>Titres acceptés</span>
+                                              </div>
+                                              <div class="text__table-content">
+                          <p>Itinéraire</p>
+                          <span>500</span>
+                          <p>Titres acceptés</p>
+                          <span>Gare Mascouche à la station de métro Radisson</span>
+                          <span>Titre Tous modes ABC ou du secteur Terrebonne-Mascouche</span>
+                        </div>
+                                              <div class="text__table-content">
+                          <p>Itinéraire</p>
+                          <span>501</span>
+                          <p>Titres acceptés</p>
+                          <span>Gare Terrebonne à la station de métro Radisson</span>
+                          <span>Titre Tous modes ABC ou du secteur Terrebonne-Mascouche</span>
+                        </div>
+                                              <div class="text__table-content">
+                          <p>Itinéraire</p>
+                          <span>502</span>
+                          <p>Titres acceptés</p>
+                          <span>Gare Repentigny à la station de métro Radisson</span>
+                          <span>Titre Tous modes ABC ou titres locaux externes du secteur L'Assomption</span>
+                        </div>
+                                          </div>
+
+
+
+
+
+
+
+
+
+                                      <p>Consultez l'horaire de la navette <a href="https://exo.quebec/fr/planifier-trajet/autobus/MRCLM/500/0" target="_blank">500</a>.</p>
+
+                                      <div class="card text__info card__info card--blue-light">
+                      <span class="info__icon info__icon--1"></span>
+                      <div>
+                        <p><b>Bon à savoir:</b> En raison du faible achalandage, les navettes 501 et 502 sont suspendues depuis le 24 août 2020.</p>                      </div>
+                    </div>
+
+
+
+
+
+                                          </div>
+          </div>
+
+      </div>
+    <div id="section-2" class="text__section">
+    <h2 class="text__section-heading copy-1">OPUS+ ou OPUS+ entreprise</h2>
+
+
+
+
+                        <div class="text__card">
+            <div id="question-2-1" class="text__card-header">Je suis abonné à OPUS+ ou OPUS+ entreprise</div>
+            <div class="text__card-content">
+
+
+
+
+
+                                      <p>Pour bénéficier de l'offre, vous n'avez aucune démarche à faire. La réduction sera appliquée automatiquement pour tous les abonnés actifs admissibles en date du 31 octobre 2020. </p>
+                                          </div>
+          </div>
+
+      </div>
+    <div id="section-3" class="text__section">
+    <h2 class="text__section-heading copy-1">Annuler son abonnement</h2>
+
+
+
+
+                        <div class="text__card">
+            <div id="question-3-1" class="text__card-header">Pour mettre fin à votre abonnement, vous devez:</div>
+            <div class="text__card-content">
+
+
+
+
+
+
+                    <br>
+                    <ul>
+                      <li><p>accéder à votre <a href="https://exo.quebec/fr/mon-rtm/accueil" target="_blank">compte en ligne</a> ou communiquer avec notre <a href="https://exo.quebec/fr/service-clientele" target="_blank">Service à la clientèle</a>.</p></li>
+                      <li><p>donner un préavis au plus tard le 10<sup>e</sup> jour du mois précédant le mois visé par la résiliation de l'abonnement, à défaut de quoi la résiliation ne s'appliquera que le 1er jour du mois suivant.</p></li>
+                    </ul>
+                    <p><b>Exemple</b>: pour résilier un abonnement au 31 mai, la demande de résiliation doit être reçue chez exo au plus tard le 10 mai. Si la demande est reçue le 11 mai ou dans les jours qui suivront, l'abonnement ne prendra fin que le 30 juin.</p>
+
+                                      <div class="card text__info card__info card--blue-light">
+                      <span class="info__icon info__icon--1"></span>
+                      <div>
+                        <p>L'ARTM et exo ne peuvent être tenus responsables d'une demande de résiliation faite par un usager après le 10<sup>e</sup> jour du mois précédant le mois visé par la résiliation d'abonnement, et aucun remboursement ne sera octroyé, le cas échéant.</p>                      </div>
+                    </div>
+
+
+
+
+
+                                          </div>
+          </div>
+
+      </div>
+
+  </div>
+</div>
+
+      </div>
+
+                <div class="card card--2cl card--no-padding">
+      <div class="card__cl card__cl--padding card__cl--1 card--black">
+        <h3 class="sub-heading sub-heading--person">Vous voulez tester d’autres options pour vous rendre à destination?</h3>
+        <h2 class="heading-2">Planifiez vos déplacements</h2>
+                <a href="https://exo.quebec/Media/Default/html/REM/fr/sectors.html" target="_blank" class="btn btn--yellow">Voir les alternatives</a>
+              </div>
+      <div class="card__cl card__cl--padding card__cl--1 card--green-forest">
+        <h3 class="sub-heading sub-heading--chat">Des questions au sujet de la mesure?</h3>
+        <h2 class="heading-2">Nous sommes là pour vous répondre</h2>
+                <a href="contact.html" class="btn btn--yellow">Nous écrire</a>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</main>
+
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="footer__comments">
+				<div class="footer__comments-title">
+					<svg version="1.1" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg"><path d="m7 3q-1.594 0-2.98 0.543t-2.203 1.465-0.816 1.992q0 0.875 0.559 1.668t1.574 1.371l0.68 0.391-0.211 0.75q-0.187 0.711-0.547 1.344 1.187-0.492 2.148-1.336l0.336-0.297 0.445 0.047q0.539 0.062 1.016 0.062 1.594 0 2.98-0.543t2.203-1.465 0.816-1.992-0.816-1.992-2.203-1.465-2.98-0.543zm7 4q0 1.359-0.937 2.512t-2.547 1.82-3.516 0.668q-0.547 0-1.133-0.062-1.547 1.367-3.594 1.891-0.383 0.109-0.891 0.172h-0.039q-0.117 0-0.211-0.082t-0.125-0.215v-8e-3q-0.023-0.031-4e-3 -0.094t0.016-0.078 0.035-0.074l0.047-0.07t0.055-0.066 0.062-0.07q0.055-0.062 0.242-0.27t0.27-0.297 0.242-0.309 0.254-0.398 0.211-0.461 0.203-0.594q-1.227-0.695-1.934-1.719t-0.707-2.195q0-1.359 0.937-2.512t2.547-1.82 3.516-0.668 3.516 0.668 2.547 1.82 0.937 2.512z"/></svg>					<span>Sondage éclair</span>
+				</div>
+								<iframe id="sondage-eclaire-pied-page" style="overflow: hidden;" width="100%" height="100" src="https://ca.surveygizmo.com/s3/50074771/mesure-utile" frameborder="0" iframe="" scrolling="no"></iframe>
+											</div>
+			<div class="footer__nav">
+				<div class="footer__item">
+					<a class="footer__link" href="index.html">Accueil</a>
+					<a class="footer__link" href="sectors.html">Options de transport</a>
+					<a class="footer__link" href="faq.html">FAQ</a>
+				</div>
+				<div class="footer__item">
+					<a class="footer__link" href="fares-exo5.html">Mesures tarifaires - Ligne Mascouche</a>
+					<a class="footer__link" href="fares-exo6.html">Mesures tarifaires - Ligne Deux-Montagnes</a>
+					<a class="footer__link" href="contact.html">Contactez-nous</a>
+				</div>
+				<div class="footer__item">
+					<a class="footer__link" href="../en/index.html">English version</a>
+					<a class="footer__link btn__action btn__action--external" href="https://exo.quebec/fr" target="_blank">Site exo.quebec</a>
+					<a class="footer__link btn__action btn__action--external" href="https://rem.info/fr" target="_blank">Site rem.info</a>
+				</div>
+			</div>
+			<div class="footer__copy">
+				<p class="footer__copy--copy">&copy;2020 exo, Tous droits réservés.</p>
+				<p class="footer__copy--copy">Le nom « exo » est une marque officielle déposée par le Réseau de transport métropolitain en vertu du sous-alinéa 9(1)(n)(iii) de la Loi sur les marques de commerce (L.R.C. (1985), ch. T-13).</p>
+			</div>
+		</div>
+	</footer>
+
+	<div
+  id="info-modal"
+  class="modal"
+  role="alertdialog"
+  aria-modal="true"
+  aria-labelledby="modal_label"
+  aria-describedby="modal_desc"
+  tabindex="-1">
+  <div class="modal__content card--grey-4">
+    <span class="modal__close js-close"></span>
+    <h2 class="modal__heading heading-2" id="modal_label">Avis</h2>
+    <p class="modal__copy copy-2" id="modal_desc">Veuillez noter que ce site est encore en construction</p>
+    <button class="modal__btn btn btn--green js-close">J'ai compris</button>
+  </div>
+</div>
+
+	<script
+			  src="https://code.jquery.com/jquery-1.10.2.min.js"
+			  integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg="
+			  crossorigin="anonymous"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>
